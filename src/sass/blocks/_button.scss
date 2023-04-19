@@ -1,0 +1,104 @@
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+
+	color: darken($white-color,11%);
+	background: darken($back-color,31%);
+
+}
+
+
+
+.btn {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: $white-color;
+    background: $back-color;
+    border-radius: 5px;
+		transition: all .30s ease-in-out;
+		&:hover{
+			color: darken($white-color,11%);
+			background: darken($back-color,11%);
+		}
+
+
+
+    &_header {
+        padding: 20px 18px;
+    }
+
+    &_phone {
+
+			background: $accent;
+			font-weight: 400;
+			transition: all .30s ease-in-out;
+			&:hover{
+				background: darken($accent, 11%) ;
+				color: darken( $white-color, 12%);
+
+			}
+		}
+    &_submit {
+      
+      box-shadow: 0px 5px 14px rgba(247, 103, 67, 0.25);
+
+    }
+
+  
+    &_build {
+        position: relative;
+        margin-right: 10px;
+         box-shadow: 0px 5px 14px rgba(247, 103, 67, 0.25);
+
+        img {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+
+    &_prod {
+        position: relative;
+        margin-right: 10px;
+       
+        box-shadow: 0px 5px 14px rgba(247, 103, 67, 0.25);
+
+        img {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+
+    &_find {
+        position: relative;
+        height: 48px;
+        margin-right: 10px;
+        width: 280px;
+        box-shadow: 0px 5px 14px rgba(247, 103, 67, 0.25);
+
+        img {
+            position: absolute;
+            top: 7px;
+            right: 15px;
+        }
+    }
+
+    &_bg {
+        background: #2F7B80;
+    }
+
+    &_footer {
+        position: relative;
+        margin-bottom: 20px;
+ 
+        img {
+            position: absolute;
+            top: 7px;
+            right: 55px;
+        }
+    }
+}
