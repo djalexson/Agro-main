@@ -1,19 +1,22 @@
 .form {
-		font-size: 16px;
+    font-size: 16px;
     padding-top: 30px;
-		&__wrap{
-			display: flex;
-			align-items: center;
-			flex-wrap: wrap;
 
-		}
-		input {
-			padding: 8px;
-			 margin-right: 18px;
-			 background: #FFFFFF;
-			 border: none;
-			 border-radius: 5px;
-	 }
+    &__wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    input {
+        padding: 10px;
+        margin-right: 18px;
+        background: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+    }
+
     &__title {
         margin-bottom: 15px;
         font-weight: 400;
@@ -23,10 +26,10 @@
         color: $white-color;
 
         &_build {
-            margin-bottom: 8px;
+            margin-bottom: 3px;
             font-weight: 400;
-            font-size: 32px;
-            color: #000000;
+            font-size: 1.7em;
+            color: $black-color;
             text-transform: none;
         }
 
@@ -40,10 +43,10 @@
 
         &_footer {
             font-weight: 400;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 1.4em;
+            line-height: normal;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: $white-color;
         }
     }
 
@@ -85,16 +88,27 @@
         }
     }
 
-   
+
 
     &_build {
         padding-top: 5px;
 
         input {
             background: rgba(178, 175, 175, 0.68);
-            height: 40px;
+						padding: 11px 0px 11px 12px;
+						margin-right: 10px;
+						font-size: 0.8em;
             margin-right: 10px;
-        }
+					}
+					.btn_phone{
+						
+						padding: 8px 20px 9px 20px;
+					}
+					.btn_submit{
+					margin-right: 10px;
+					padding: 8px 37px 9px 20px;
+				
+				}
     }
 
     &_prod {
@@ -115,13 +129,31 @@
             margin-right: 15px;
         }
     }
+	&__wrap--footеr{
+		flex-direction: column;
+						input {
+							font-size: 1em;
+								width: 100%;
+								margin:0  0 20px 0 ;
+						}
+						.btn_footer{
+							background: $back-color;
+							transition: all .30s ease-in-out;
+							&:hover{
 
+								background: darken($back-color, 11%);
+							}
+
+							
+&::after{
+	right: 60px;
+
+}
+
+						}
+
+	}
     &_footer {
         padding-top: 0;
-
-        input {
-            width: 100%;
-            margin-bottom: 20px;
-        }
     }
 }

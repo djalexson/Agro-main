@@ -1,10 +1,11 @@
 .hero {
-font-size: 16px;
+    font-size: 16px;
+
     &__wrapper {
-			position: relative;
+        position: relative;
         padding-top: 115px;
         padding-bottom: 93px;
-				z-index: 2;
+        z-index: 2;
     }
 
     &__title {
@@ -41,9 +42,9 @@ font-size: 16px;
             left: 0;
             width: 16px;
             height: 16px;
-						background: $accent;
-						border-radius: 50%;
-					
+            background: $accent;
+            border-radius: 50%;
+
         }
     }
 }
