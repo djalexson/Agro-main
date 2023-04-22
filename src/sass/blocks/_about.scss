@@ -1,6 +1,6 @@
 .about {
- margin-top: 50px;
-font-size: 16px;
+    margin-top: 50px;
+    font-size: 16px;
 
     &__descr {
         margin-bottom: 33px;
@@ -19,12 +19,14 @@ font-size: 16px;
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
-img{
-	object-fit: contain;
-	width:100%;
-	max-width: 69px;
-	height: auto;
-}
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                max-width: 69px;
+                height: auto;
+            }
+
             &__title {
                 font-weight: 600;
                 font-size: 1.2em;
@@ -48,24 +50,25 @@ img{
 
     &__img-right {
         margin-left: 10px;
-      
+
 
         img {
-					display: block;
-     object-fit: cover;
-		 width: 100%;
+            display: block;
+            object-fit: cover;
+            width: 100%;
         }
 
     }
 
     &__img-bottom {
         margin-top: 20px;
-     img{
-			display: block;
-     object-fit: cover;
-		 width: 100%;
 
-		 }  
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+
+        }
     }
 
 }

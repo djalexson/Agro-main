@@ -1,47 +1,41 @@
 window.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.build__tab');
-    const contents = document.querySelectorAll('.build__item');
 
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].addEventListener('click', (e) => {
-            let tabsChildren = e.target.parentElement.children;
+    function tabs(elem) {
+        const tabs = document.querySelectorAll(`.${elem}__tab`);
+        const contents = document.querySelectorAll(`.${elem}__item`);
 
-            for (let j = 0; j < tabsChildren.length; j++) {
-                tabsChildren[j].classList.remove('build__tab_active');
-            }
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', (e) => {
+                let tabsChildren = e.target.parentElement.children;
 
-            tabs[i].classList.add('build__tab_active');
+                for (let j = 0; j < tabsChildren.length; j++) {
+                    tabsChildren[j].classList.remove(`${elem}__tab_active`);
+                }
 
-            let tabContentChildren = e.target.parentElement.nextElementSibling.children;
+                tabs[i].classList.add(`${elem}__tab_active`);
 
-            for (let k = 0; k < tabContentChildren.length; k++) {
-                tabContentChildren[k].classList.remove('build__item_active');
-            }
+                let tabContentChildren = e.target.parentElement.nextElementSibling.children;
 
-            contents[i].classList.add('build__item_active');
-        })
+                for (let k = 0; k < tabContentChildren.length; k++) {
+                    tabContentChildren[k].classList.remove(`${elem}__item_active`);
+                }
+
+                contents[i].classList.add(`${elem}__item_active`);
+            })
+        }
     }
 
-    const tabsProd = document.querySelectorAll('.prod__tab');
-    const contentsProd = document.querySelectorAll('.prod__item');
+    tabs('build');
 
-    for (let i = 0; i < tabsProd.length; i++) {
-        tabsProd[i].addEventListener('click', (e) => {
-            let tabsChildren = e.target.parentElement.children;
+    /// hamburger
 
-            for (let j = 0; j < tabsChildren.length; j++) {
-                tabsChildren[j].classList.remove('prod__tab_active');
-            }
+    const menu = document.querySelector('.mobile__menu'),
+        hamburger = document.querySelector('.hamburger');
 
-            tabsProd[i].classList.add('prod__tab_active');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('mobile_active');
+    });
 
-            let tabContentChildren = e.target.parentElement.nextElementSibling.children;
 
-            for (let k = 0; k < tabContentChildren.length; k++) {
-                tabContentChildren[k].classList.remove('prod__item_active');
-            }
-
-            contentsProd[i].classList.add('prod__item_active');
-        })
-    }
 });

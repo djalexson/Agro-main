@@ -95,20 +95,22 @@
 
         input {
             background: rgba(178, 175, 175, 0.68);
-						padding: 11px 0px 11px 12px;
-						margin-right: 10px;
-						font-size: 0.8em;
+            padding: 11px 40px 11px 12px;
             margin-right: 10px;
-					}
-					.btn_phone{
-						
-						padding: 8px 20px 9px 20px;
-					}
-					.btn_submit{
-					margin-right: 10px;
-					padding: 8px 37px 9px 20px;
-				
-				}
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+
+        .btn_phone {
+
+            padding: 8px 22px 9px 22px;
+        }
+
+        .btn_submit {
+            margin-right: 10px;
+            padding: 8px 54px 9px 20px;
+
+        }
     }
 
     &_prod {
@@ -129,30 +131,29 @@
             margin-right: 15px;
         }
     }
-	&__wrap--footеr{
-		flex-direction: column;
-						input {
-							font-size: 1em;
-								width: 100%;
-								margin:0  0 20px 0 ;
-						}
-						.btn_footer{
-							background: $back-color;
-							transition: all .30s ease-in-out;
-							&:hover{
 
-								background: darken($back-color, 11%);
-							}
+    &__wrap--footеr {
+        flex-direction: column;
 
-							
-&::after{
-	right: 60px;
+        input {
+            font-size: 1em;
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
 
-}
+        .btn_footer {
+            background: $back-color;
+            transition: all .30s ease-in-out;
 
-						}
+            &:hover {
 
-	}
+                background: darken($back-color, 11%);
+            }
+
+        }
+
+    }
+
     &_footer {
         padding-top: 0;
     }
