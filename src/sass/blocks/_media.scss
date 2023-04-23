@@ -1,50 +1,52 @@
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .header {
+        &__logo {
+            width: 160px;
 
-.header {
-    &__logo {
-        width: 160px;
-
-        &__link img {
-            width: 80%;
+            &__link img {
+                width: 80%;
+            }
         }
-    }
 
-    &__price {
-        font-size: 0.8em;
-    }
-
-    &__contacs__link {
-        p {
+        &__price {
             font-size: 0.8em;
         }
-    }
 
-    &__phones {
-        a {
-            font-size: 0.9em;
+        &__contacs__link {
+            p {
+                font-size: 0.8em;
+            }
+        }
+
+        &__phones {
+            a {
+                font-size: 0.9em;
+            }
         }
     }
+
+    .nav__menu__item:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    .form__phone_footer {
+        margin-left: 0;
+    }
+
+    .form__wrap--footеr {
+        margin-left: 0;
+    }
+
+    .form__title_footer {
+        font-size: 1em;
+    }
+
+    .build__ml {
+        margin-left: 10px;
+    }
 }
 
-.nav__menu__item:not(:last-child) {
-    margin-right: 5px;
-}
 
-.form__phone_footer {
-    margin-left: 0;
-}
-
-.form__wrap--footеr {
-    margin-left: 0;
-}
-
-.form__title_footer {
-    font-size: 1em;
-}
-
-.build__ml {
-    margin-left: 0;
-}
 
 ///////////////////////////
 ///////////////////////////
@@ -53,7 +55,7 @@
 
 
 
-@media (max-width: 992px) {
+@media (max-width: 999px) {
     .header {
         &__logo {
             width: 160px;
