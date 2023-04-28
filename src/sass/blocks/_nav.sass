@@ -1,40 +1,46 @@
-.nav
-	background: $accent
+.menu
+	display: flex
+	align-items: center
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 20px 33px
+	font-size: 1em
+	font-weight: 700
+	color: $white-color
+	text-transform: uppercase
+	cursor: pointer
+	transform: translateY(-100%)
+	z-index: -1
+	visibility: hidden
+	transition: all .30s ease-in-out
+	span
+		pointer-events: none
+	.hamburger--menu
+		pointer-events: none
+	
 
+.nav
+	position: relative
+	background: $accent
 	&__menu
-		display: flex
-		justify-content: space-evenly
-		flex-wrap: wrap
-		margin: 0
 		list-style-type: none
 		&__item
 			position: relative
-			&:not(:last-child)
-				margin-right: 7.1%
-				
-			&:has(.nav__dropdown:hover,.nav__dropdown_item:hover,.nav__dropdown_link:hover)
-				.nav__menu__link		
-					color: darken($white-color,11%)
-					&--triangle		
-						&::before
-							border-top: none
-							border-bottom: 9px solid darken($white-color,11%)
+			
+
 		&__link
-			display: block
-			font-weight: 500
-			padding: 20px 0
+			position: relative
 			font-size: 0.90em
 			letter-spacing: 0.01em
 			color: $white-color
 			text-decoration: none
-			position: relative
 			text-transform: uppercase
 			transition: all .30s ease-in-out
-			&:not(:last-child)
-				padding: inherit 5px
 			&:hover
 				color: darken($white-color,11%)
-			&--triangle		
+			&--triangle
 				&::before
 					content: ""
 					position: absolute
@@ -47,55 +53,189 @@
 					top: 50%
 					transform: translateY(-50%)
 					transition: all .30s ease-in-out
-				&:hover ~ .nav__dropdown
-					visibility: visible
-					opacity: 1
-					z-index: 4				
-					max-height: 600px		
-				&:hover
-					&::before
-						border-top: none
-						border-bottom: 9px solid darken($white-color,11%)
 	&__dropdown
-		position: absolute
-		left: 0
-		top: 64px
-		visibility: hidden
-		z-index: -1
-		opacity: 0
-		max-height: 0
-		padding: 12px 15px
-		min-width: 213px
-		overflow: hidden
-		border-radius: 0 0px 5px 5px
-		background: $accent
 		list-style: none
 		transition: all .30s ease-in-out
-		&:hover ~ .nav__menu__link--triangle 
-			&::before
-				border-top: none
-				border-bottom: 9px solid darken($white-color,11%)
-		&:hover
-			opacity: 1
-			max-height: 600px
-			visibility: visible
-			z-index: 4
 		&__item
 			display: block
 			margin: 0
 			padding: 0
 			&:not(:last-child)
 				margin-bottom: 15px
-				
 		&__link
-			font-weight: 500
-			transition: all .30s ease-in-out
-			font-size: 1em
-			line-height: 21px
-			letter-spacing: 0.01em
-			text-decoration: none
+			position: relative
+			font-size: 0.97em
+			line-height: normal
 			color: $white-color
+			text-decoration: none
+			transition: all .30s ease-in-out
 			&:hover
 				color: darken($white-color,11%)
+@media (min-width:769px) 
+	.nav
+		padding: 0 44px 0 20px
+		&__menu
+			display: flex
+			justify-content: flex-start
+			flex-wrap: wrap
+			&__item,.nav__dropdown__item
+				&.active
+					& .nav__menu__link,.nav__dropdown__link
+						&::after
+							opacity: 1
+							width: 100%
+				&:not(:last-child)
+					margin-right: auto
 
+				&:has(.nav__dropdown:hover,.nav__dropdown_item:hover,.nav__dropdown_link:hover)
+					.nav__menu__link
+						&::after
+							opacity: 1
+							width: 100%
+					.nav__menu__link
+						color: darken($white-color,11%)
+						&--triangle
+							&::before
+								border-top: none
+								border-bottom: 9px solid darken($white-color,11%)
+			&__link,.nav__dropdown__link
+				position: relative
+				&::after
+					content: ""
+					background: $white-color
+					position: absolute
+					bottom: 17px
+					left: 50%
+					opacity: 0
+					transform: translateX(-50%)
+					height: 1px
+					width: 0	
+					transition: all .30s ease-in-out
+			&__link
+				display: block
+				font-weight: 500
+				padding: 20px 0
+				position: relative
+				text-transform: uppercase
+				transition: all .30s ease-in-out
+				&:not(:last-child)
+					padding: inherit 5px		
+				&:hover
+					color: darken($white-color,11%)
+				&:hover
+					&::after
+						background:	darken($white-color,11%)
+						opacity: 1
+						width: 100%
+				&--triangle
+					&:hover ~ .nav__dropdown
+						visibility: visible
+						opacity: 1
+						z-index: 4
+						max-height: 600px
+					&:hover
+						&::before
+							border-top: none
+							border-bottom: 9px solid darken($white-color,11%)
+				
+		&__dropdown
+			display: block
+			position: absolute
+			right:-25px
+			top: 64px
+			visibility: hidden
+			z-index: -1
+			opacity: 0
+			max-height: 0
+			padding: 12px 15px
+			min-width: 200px
+			overflow: hidden
+			border-radius: 0 0px 5px 5px
+			background: $accent		
+			&:hover ~ .nav__menu__link--triangle
+				&::before
+					border-top: none
+					border-bottom: 9px solid darken($white-color,11%)
+			&:hover
+				opacity: 1
+				max-height: 600px
+				visibility: visible
+				z-index: 4
+			&__link
+				&:hover
+					&::after
+						bottom: 0
+						background:	darken($white-color,11%)
+						opacity: 1
+						width: 100%
 
+@media (max-width:768px)
+	.menu
+		visibility: visible
+		z-index: 1
+		transform: translateY(0)
+	.hamburger
+		position: relative
+		z-index: 2
+		display: block
+		width: 14px
+		height: 10px
+		&_active
+			span 
+				&:nth-child(1) 
+					transform: translateY(4px) rotate(-45deg)
+				&:nth-child(2) 
+					display: none
+				&:nth-child(3)
+					transform: rotate(45deg)
+		& span 
+			pointer-events: none
+			display: block
+			height: 2px
+			width: 100%
+			background-color:  $back-color
+			margin-bottom: 2px
+			transition: all .30s ease-in-out  
+		&--menu
+			margin-left: auto
+			span 
+				background: $white-color
+	.nav
+		padding: 0 20px
+		min-height: 62px
+		&__menu
+			display: none
+			background: $accent
+			position: absolute
+			left: 0
+			right: 0
+			top: 100%
+			z-index: 1
+			padding: 0 26px 28px 26px
+		
+			&__item:has(.active)
+				background: rgba($white-color, .03 )
+				padding: 10px 0 0 5px
+				& a::before
+					border-top: none
+					border-bottom: 9px solid darken($white-color,11%)		
+			&__item:has(.nav__dropdown)
+				&:hover,&:active
+					background: rgba($white-color, .03 )
+
+			&__item,.nav__dropdown__item
+				padding: 10px 0 10px 5px
+				cursor: pointer
+				border-bottom: 1px solid $white-color
+				&:not(:last-child)
+					margin-bottom: 15px
+				&:hover,&:active
+					background: rgba($white-color, 0.1 )
+					border-bottom: 1px solid darken($white-color,11%)
+		&__dropdown
+			margin-top: 10px
+			display: none
+			&>&__item
+				&:last-child
+					border-bottom: none
+					

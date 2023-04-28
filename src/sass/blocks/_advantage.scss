@@ -1,24 +1,25 @@
 .advantage {
     margin-top: 50px;
-		font-size: 16px;
+    font-size: 16px;
 
     &__item {
-        margin:0 0 60px 0;
-				display: flex;
-				align-items: center;
-img{
-width: 100%;
-max-width: 60px;
-object-fit: contain;
-height: auto;
-margin-right: 10px;
+        margin: 0 0 60px 0;
+        display: flex;
+        align-items: center;
 
-}
+        img {
+            width: 100%;
+            max-width: 60px;
+            object-fit: contain;
+            height: auto;
+            margin-right: 10px;
+
+        }
 
         &-title {
             font-weight: 600;
-						font-size: 1.8em;
-						margin: 0 0 4px 0;
+            font-size: 1.8em;
+            margin: 0 0 4px 0;
             color: $black-color;
         }
 
