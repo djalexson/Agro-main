@@ -130,8 +130,15 @@ class My_Walker_footer_Menu extends Walker_Nav_Menu {
 
 }
 
+<<<<<<< HEAD
 function my_nav_menu( $args,$Walker,$class) {
 	$attr= get_field("mob_menu","options")?'data-menu="'.get_field("mob_menu","options").'"':'';	
+=======
+//var_dump( get_field());
+function my_nav_menu( $args,$Walker,$class) {
+	$attr= get_field("mob","main-menu")?'data-menu="'.get_field("mob","main-menu" ).'"':'';
+	
+>>>>>>> 900b25c (ок)
 	$args = array_merge( [
 		'container'       =>  false,
 		'container_id'    =>  false,
@@ -143,6 +150,7 @@ function my_nav_menu( $args,$Walker,$class) {
 	], $args );
 
 	echo wp_nav_menu( $args );
+<<<<<<< HEAD
 }
 
 
@@ -238,3 +246,6 @@ return $output ;
 // Логика обработки шорткода
 }
 add_shortcode('dynamic_img', 'dynamic_img_shortcode');
+=======
+}
+>>>>>>> 900b25c (ок)
