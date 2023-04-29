@@ -59,7 +59,7 @@
 
     &__title {
         font-weight: 600;
-        font-size: 2.1em;
+        font-size: 1.7em;
         line-height: 58px;
         text-transform: uppercase;
 
@@ -72,7 +72,7 @@
     &__price {
         margin-top: 40px;
         font-weight: 400;
-        font-size: 1.4em;
+        font-size: 1.2em;
         line-height: 29px;
         color: #E10B20;
     }
@@ -80,7 +80,7 @@
     &__subtitle {
         margin-top: 25px;
         font-weight: 600;
-        font-size: 1.4em;
+        font-size: 1.2em;
         line-height: 29px;
         color: #000000;
     }
@@ -88,7 +88,7 @@
     &__text {
         margin-top: 25px;
         font-weight: 400;
-        font-size: 1.4em;
+        font-size: 1.2em;
         line-height: 29px;
 
         span {
@@ -124,6 +124,10 @@
                 flex: 1;
             }
         }
+
+        &_hide {
+            list-style: none;
+        }
     }
 
     &__item {
@@ -154,6 +158,7 @@
                 line-height: 150%;
                 color: $white-color;
                 text-decoration: none;
+
             }
 
             background: $accent;
@@ -166,7 +171,7 @@
     }
 
     &__tab {
-        padding: 20px 1px;
+        padding: 16px 1px;
     }
 
     &__option {
@@ -201,9 +206,10 @@
         }
 
         &_title {
+            padding: 0 5px;
             margin-top: 25px;
             font-weight: 500;
-            font-size: 1.4em;
+            font-size: 1.2em;
             line-height: 94.02%;
             text-align: center;
         }
@@ -211,7 +217,7 @@
         &_price {
             margin-top: 25px;
             font-weight: 500;
-            font-size: 1.4em;
+            font-size: 1.2em;
             line-height: 94.02%;
             text-align: center;
             color: #E10B20;
@@ -285,4 +291,42 @@
 .carousel-control-prev {
     color: #2F7B80;
     opacity: 1;
+}
+
+
+
+////////  Accordion custom
+.accordion-button {
+    display: block;
+    background-color: #2F7B80;
+    color: $white-color;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #2F7B80;
+    color: darken($white-color, 11%);
+}
+
+.accordion-item {
+    margin-bottom: 5px;
+}
+
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 5px;
+}
+
+.accordion {
+    margin-left: 20px;
+}
+
+.accordion-body {
+    padding: 0;
+    padding-top: 4px;
+}
+
+.accordion-flush .accordion-item {
+    border: none;
 }
