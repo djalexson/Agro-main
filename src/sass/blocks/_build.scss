@@ -30,6 +30,7 @@
     }
 
     &__tab {
+        height: 51px;
         color: #000;
         font-weight: 500;
         font-size: 1em;
@@ -42,7 +43,7 @@
         border: 2px solid $accent;
         display: flex;
         align-items: center;
-				flex-wrap: wrap;
+        flex-wrap: wrap;
         transition: all .30s cubic-bezier(0.39, 0.575, 0.565, 1);
 
         &-second {

@@ -1,40 +1,40 @@
 .mobile__item {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 
 .btn_mobile {
-	padding: 5px 0;
+    padding: 5px 0;
 }
 
 .mobile__menu {
-	display: flex;
-	position: fixed;
-	flex-direction: column;
-	justify-content: center;
-	top: 30px;
-	opacity: 0;
-	right:0;
-	transform: translateX(100%);
-	width: 290px;
-	height: 300px;
-	padding: 27px;
-	background-color: $white-color;
-	transition: all .6s ease-in-out;
-	z-index: -1;
-	border-radius: 5px
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    top: 30px;
+    opacity: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 290px;
+    height: 300px;
+    padding: 27px;
+    background-color: $white-color;
+    transition: all .6s ease-in-out;
+    z-index: -1;
+    border-radius: 5px
 }
 
 .mobile_active {
-	visibility: visible;
-	opacity: 1;
-z-index: 2;
-	transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0);
 }
 
 @media (max-width: 1200px) {
     .header {
-   
+
         &__price {
             font-size: 0.8em;
         }
@@ -67,18 +67,132 @@ z-index: 2;
     .build__ml {
         margin-left: 10px;
     }
-		.btn {
-			font-size: 0.9em;
-		}
-		
-.form_build .btn_submit {
-    margin-right: 9px;
-    padding: 9px 12px 9px 18px;
-}
 
-.form_build .btn_phone {
-    padding: 8px 10px 9px 10px;
-}
+    .btn {
+        font-size: 0.9em;
+    }
+
+    .form_build .btn_submit {
+        margin-right: 9px;
+        padding: 9px 12px 9px 18px;
+    }
+
+    .form_build .btn_phone {
+        padding: 8px 10px 9px 10px;
+    }
+
+    ////////// Catalog
+
+    .catalog {
+        padding-top: 20px;
+
+        &__hidden {
+            display: none;
+        }
+
+        &__title {
+            font-size: 1.7em;
+
+            &_prod {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__card {
+            margin-bottom: 20px;
+
+            &_price {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__option {
+            padding: 12px;
+        }
+
+        &__char {
+            font-size: 1em;
+        }
+
+        &__value {
+            font-size: 1em;
+            margin-left: 80px;
+        }
+
+        &__text {
+            font-size: 1.2em;
+        }
+
+        &__link {
+            font-size: 1em;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+
+            ul {
+                li {
+                    &:first-child {
+                        margin-left: 22px;
+                    }
+                }
+
+                li+li::before {
+                    content: '/';
+                    padding: 0 4px;
+                    color: $black-color;
+                }
+            }
+        }
+
+        &__img {
+            max-width: 450px;
+        }
+
+        &__price {
+            margin-top: 61px;
+        }
+
+        &__item {
+            &_main {
+                padding: 0;
+
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+
+                a {
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        &__tab {
+            font-size: 0.8em;
+            flex: 1;
+            padding: 15px 5px;
+        }
+
+        &__list {
+            &_mobile {
+                display: flex;
+            }
+        }
+    }
+
+    .lg__hidden {
+        display: block;
+    }
+
+    .build_catalog {
+        padding-top: 30px;
+    }
+
+
+    .card__col {
+        width: 100%;
+    }
 }
 
 
@@ -89,45 +203,49 @@ z-index: 2;
 ///////////////////////////
 
 @media (max-width: 1055px) {
-.btn{
-&_header{
-	display: block;
-	width: 30%;
-	margin: 10px auto 0 auto;
-}
+    .btn {
+        &_header {
+            display: block;
+            width: 30%;
+            margin: 10px auto 0 auto;
+        }
 
-}
+    }
 
 }
 
 
 @media (max-width: 999px) {
-	.build__tabs{
-		width: 72%;
-		margin: 20px auto 0 auto;
-	}
-		
-	
-	 .build__tab {
-    font-size: 0.8em;
-	 }
+    .build__tabs {
+        width: 72%;
+        margin: 20px auto 0 auto;
+    }
+
+
+    .build__tab {
+        font-size: 0.8em;
+    }
+
     .form_build input {
-    width: 26%; 
-		}
-		.build__text {
-			text-align: center;
-			margin-bottom: 28px;
-	}
-    .find{
-			font-size: 14px;
-		}
-	.footer__hidden {
-		display: none;
-	}
-	
-	.lg__hidden {
-		display: block;
-	}
+        width: 26%;
+    }
+
+    .build__text {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .find {
+        font-size: 14px;
+    }
+
+    .footer__hidden {
+        display: none;
+    }
+
+    .lg__hidden {
+        display: block;
+    }
 
     .main-txt {
         &__title {
@@ -141,11 +259,11 @@ z-index: 2;
 
 
     .footer {
-			&__logo {
-				margin-bottom: 20px;
+        &__logo {
+            margin-bottom: 20px;
 
             a {
-							width: 28%;	
+                width: 28%;
                 margin: 0 auto;
             }
 
@@ -153,41 +271,45 @@ z-index: 2;
                 width: 40%;
             }
 
-       
+
         }
 
         &__phone {
-margin: 0;
-font-size: 1em;
-}
-
-          &__ter {
-					margin: 0;
-			
+            margin: 0;
+            font-size: 1em;
         }
+
+        &__ter {
+            margin: 0;
+
+        }
+
         &__work-nav__menu {
-					margin-left: 0;
-					
-					&__item {
-						line-height: 20px;
-						font-size: 1.1em;
-					}
-        }
-			}
-			.footer__social{
+            margin-left: 0;
 
-				margin: 0;
-			}
-			.footer__ter{
-				margin: 0;
-			}
-			  
-		.build {
-			
-			font-size: 14px;
-		}
+            &__item {
+                line-height: 20px;
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    .footer__social {
+
+        margin: 0;
+    }
+
+    .footer__ter {
+        margin: 0;
+    }
+
+    .build {
+
+        font-size: 14px;
+    }
+
     .form__title_footer {
-			text-align: center;
+        text-align: center;
     }
 
     .about__hidden {
@@ -196,122 +318,241 @@ font-size: 1em;
 
     .lg__hidden {
         width: 100%;
-			}
-			
-			.build__hidden {
-				display: none;
-			}
+    }
 
+    .build__hidden {
+        display: none;
+    }
+
+    ////////////catalog
+
+    .catalog {
+        padding-top: 20px;
+
+        &__hidden {
+            display: none;
+        }
+
+        &__title {
+            font-size: 1.7em;
+
+            &_prod {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__card {
+            margin-bottom: 20px;
+
+            &_price {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__option {
+            padding: 12px;
+        }
+
+        &__char {
+            font-size: 1em;
+        }
+
+        &__value {
+            font-size: 1em;
+            margin-left: 80px;
+        }
+
+        &__text {
+            font-size: 1.2em;
+        }
+
+        &__link {
+            font-size: 0.8em;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+
+            ul {
+                li {
+                    &:first-child {
+                        margin-left: 22px;
+                    }
+                }
+
+                li+li::before {
+                    content: '/';
+                    padding: 0 4px;
+                    color: $black-color;
+                }
+            }
+        }
+
+        &__img {
+            max-width: 420px;
+        }
+
+        &__price {
+            margin-top: 107px;
+        }
+
+        &__item {
+            &_main {
+                padding: 0;
+
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+
+                a {
+                    font-size: 0.55em;
+                }
+            }
+        }
+
+        &__tab {
+            font-size: 0.9em;
+            flex: 1;
+            padding: 10px 5px;
+        }
+
+        &__list {
+            &_mobile {
+                display: flex;
+            }
+        }
+    }
+
+    .build_catalog {
+        padding-top: 30px;
+    }
 }
 
 @media (max-width: 871px) {
-	.build {
-		font-size: 13px;
-	}
-	.find, .about{
-		font-size: 13px;
-	}
-	.header__phones{
-		margin: 10px 0 0 0 ;
-	}
-	
-	.btn{
-		&_header{
-			margin: 10px 0 0 0 ;
-		display: block;
-		width: 100%;
-	}
-	
-	}
-	.about {
-		&__descr {
-			font-size: 1em;
-			line-height: normal;
-			
-		}}
+    .build {
+        font-size: 13px;
+    }
+
+    .find,
+    .about {
+        font-size: 13px;
+    }
+
+    .header__phones {
+        margin: 10px 0 0 0;
+    }
+
+    .btn {
+        &_header {
+            margin: 10px 0 0 0;
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+    .about {
+        &__descr {
+            font-size: 1em;
+            line-height: normal;
+
+        }
+    }
 }
+
 @media (max-width: 768px) {
-	.find, .about{
-		font-size: 12px;
-	}
-	.build__tabs>.build__tab:first-child {
+
+    .find,
+    .about {
+        font-size: 12px;
+    }
+
+    .build__tabs>.build__tab:first-child {
 
 
-		border-radius: 5px;
-	}
-	.build__tab{
-		border: 1px solid $accent;
-		border-radius: 5px;
-		&:not(:last-child){
-			margin-bottom: 5px;
-			border-radius: 5px;
-	border-right: 1px solid $accent;
-	margin-right: 5px;
-}
-	}
-	.build {
-		font-size: 12px;
-		&__text{
+        border-radius: 5px;
+    }
 
-			margin-bottom: 10px;
-		}
-		&__tabs {
-			width: 100%;
-				flex-wrap: wrap;
-		}
+    .build__tab {
+        border: 1px solid $accent;
+        border-radius: 5px;
 
-		&__item {
-				flex-wrap: wrap;
-				margin-top: 10px;
+        &:not(:last-child) {
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border-right: 1px solid $accent;
+            margin-right: 5px;
+        }
+    }
 
-				&-lists {
-						display: block;
-						margin-top: 10px;
-				}
+    .build {
+        font-size: 12px;
 
-				&-list {
-					text-align: center;
-						margin: 0;
-				}
-		}
+        &__text {
 
-		&__hidden {
-				display: none;
-		}
+            margin-bottom: 10px;
+        }
 
-		&__ml {
-				margin-left: 0;
-		}
-}
+        &__tabs {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            flex-wrap: wrap;
+            margin-top: 10px;
+
+            &-lists {
+                display: block;
+                margin-top: 10px;
+            }
+
+            &-list {
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        &__hidden {
+            display: none;
+        }
+
+        &__ml {
+            margin-left: 0;
+        }
+    }
 
 
-	.header__phones{
-		margin: 0;
-	}
-	
-	.btn{
-		&_header{
-			margin: 0;
-			display: block;
-			width: 100%;
-		}
-		
-		}
-.header__logo__link{
+    .header__phones {
+        margin: 0;
+    }
 
-	width: 160px;
-}
+    .btn {
+        &_header {
+            margin: 0;
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+    .header__logo__link {
+
+        width: 160px;
+    }
+
     .header__hidden {
         display: none;
     }
 
-  
+
     .header__row {
         position: relative;
     }
 
     .hero {
-			font-size: 15px;
+        font-size: 15px;
         min-height: 100%;
 
         &__wrapper {
@@ -321,10 +562,10 @@ font-size: 1em;
 
         &__item {
             font-size: 1.1em;
-					}
-					
-					&__title {
-						line-height: normal;
+        }
+
+        &__title {
+            line-height: normal;
             font-size: 2em;
         }
 
@@ -379,7 +620,7 @@ font-size: 1em;
         margin-bottom: 20px;
     }
 
-   
+
     .form_build .btn_submit {
         flex: 1;
         padding: 4px 4px;
@@ -415,8 +656,8 @@ font-size: 1em;
 
     .about {
         &__descr {
-					font-size: 1.2em;
-					line-height: normal;
+            font-size: 1.2em;
+            line-height: normal;
             margin-bottom: 15px;
         }
 
@@ -492,7 +733,7 @@ font-size: 1em;
             display: none;
         }
 
-       
+
         &__work-title {
             margin-bottom: 0;
             font-size: 1.1em;
@@ -526,18 +767,116 @@ font-size: 1em;
         margin-right: 0;
     }
 
-
-    .mobile__item {
-        margin-bottom: 10px;
-    }
-
-    .btn_mobile {
-        padding: 5px 0;
-    }
-
-
     .lg__hidden {
         display: block;
+    }
+
+    ///////  Catalog
+
+    .catalog {
+        padding-top: 20px;
+
+        &__hidden {
+            display: none;
+        }
+
+        &__title {
+            font-size: 1.7em;
+
+            &_prod {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__card {
+            margin-bottom: 20px;
+
+            &_price {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__option {
+            padding: 12px;
+        }
+
+        &__char {
+            font-size: 1em;
+        }
+
+        &__value {
+            font-size: 1em;
+            margin-left: 80px;
+        }
+
+        &__text {
+            font-size: 1.2em;
+        }
+
+        &__link {
+            font-size: 0.8em;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+
+            ul {
+                li {
+                    &:first-child {
+                        margin-left: 22px;
+                    }
+                }
+
+                li+li::before {
+                    content: '/';
+                    padding: 0 4px;
+                    color: $black-color;
+                }
+            }
+        }
+
+        &__img {
+            max-width: 400px;
+        }
+
+        &__price {
+            margin-top: 107px;
+        }
+
+        &__item {
+            &_main {
+                padding: 0;
+
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+
+                a {
+                    font-size: 0.55em;
+                }
+            }
+        }
+
+        &__tab {
+            font-size: 0.85em;
+            flex: 1;
+            padding: 10px 5px;
+        }
+
+        &__list {
+            &_mobile {
+                display: flex;
+            }
+        }
+    }
+
+    .build_catalog {
+        padding-top: 30px;
+    }
+
+    .build__tabs>.build__tab:last-child {
+        border-radius: 5px;
     }
 }
 
@@ -558,7 +897,8 @@ font-size: 1em;
     }
 
     .hero {
-			font-size: 14px;
+        font-size: 14px;
+
         &__wrapper {
             padding: 30px 20px;
             text-align: center;
@@ -585,8 +925,9 @@ font-size: 1em;
     }
 
     .form {
-font-size: 14px;
-			&__title {
+        font-size: 14px;
+
+        &__title {
             font-size: 1.5em;
         }
 
@@ -775,7 +1116,7 @@ font-size: 14px;
             }
         }
 
-        
+
 
         &__copy {
             flex-direction: column;
@@ -795,58 +1136,180 @@ font-size: 14px;
     .footer__copy p:first-child {
         margin-right: 0;
     }
-  .lg__hidden {
+
+    .lg__hidden {
         display: block;
     }
 }
 
 @media (max-width:386px) {
-	.build {
+    .build {
 
-			&__tab {
-				width: 100%;
-				&:not(:last-child){
-					margin-right: 0;
-				}
+        &__tab {
+            width: 100%;
 
-			}
-			&__tabs {
-			width: 100%;
-			flex-direction: column;
-		}
-	}
-	.build__item-spec{
-		&:not(:last-child){
-			margin-bottom: 10px;
-		}
-	}
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+        }
+
+        &__tabs {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .build__item-spec {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
 
 
 }
+
 @media (max-width:366px) {
-	.form__wrap{
-		
-		.btn_phone {
-		flex: 1 0 100%;
-		width: 100%;
-	}
-	.btn_submit {
-		flex: 1 0 100%;
-		margin-bottom: 10px;
-		width: 100%;
-		margin-right: 0;
-	
-}	
-}	
-}
-		@media (max-width:374px) {
-			.form{
-				font-size: 11px;
-			}
-.hero__title {
-    font-size: 5.4vw;
-    line-height: normal;
-    margin-bottom: 16px;
+    .form__wrap {
+
+        .btn_phone {
+            flex: 1 0 100%;
+            width: 100%;
+        }
+
+        .btn_submit {
+            flex: 1 0 100%;
+            margin-bottom: 10px;
+            width: 100%;
+            margin-right: 0;
+
+        }
+    }
 }
 
-		}
+@media (max-width:374px) {
+    .form {
+        font-size: 11px;
+    }
+
+    .hero__title {
+        font-size: 5.4vw;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+
+    .lg__hidden {
+        display: block;
+    }
+
+    .nav__menu__link {
+        font-size: 0.6em;
+    }
+
+    .catalog {
+        padding-top: 20px;
+
+        &__hidden {
+            display: none;
+        }
+
+        &__title {
+            font-size: 1.7em;
+
+            &_prod {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__card {
+            margin-bottom: 20px;
+
+            &_price {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__option {
+            padding: 12px;
+        }
+
+        &__char {
+            font-size: 1em;
+        }
+
+        &__value {
+            font-size: 1em;
+            margin-left: 80px;
+        }
+
+        &__text {
+            font-size: 1.2em;
+        }
+
+        &__link {
+            font-size: 0.7em;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+
+            ul {
+                li {
+                    &:first-child {
+                        margin-left: 22px;
+                    }
+                }
+
+                li+li::before {
+                    content: '/';
+                    padding: 0 4px;
+                    color: $black-color;
+                }
+            }
+        }
+
+        &__img {
+            max-width: 200px;
+        }
+
+        &__price {
+            margin-top: 107px;
+            font-size: 1.2em;
+        }
+
+        &__item {
+            &_main {
+                padding: 0;
+
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+
+                a {
+                    font-size: 0.55em;
+                }
+            }
+        }
+
+        &__tab {
+            font-size: 0.65em;
+            flex: 1;
+            padding: 10px 5px;
+        }
+
+        &__list {
+            &_mobile {
+                display: flex;
+            }
+        }
+    }
+
+    .build_catalog {
+        padding-top: 30px;
+    }
+
+    .build__tab:last-child {
+        border-radius: 5px;
+    }
+}

@@ -96,10 +96,10 @@
         input {
             background: rgba(178, 175, 175, 0.68);
             padding: 11px;
-           font-size: 0.8em;
+            font-size: 0.8em;
             margin-right: 10px;
-						width: 36%;
-					
+            width: 36%;
+
         }
 
         .btn_phone {
@@ -109,7 +109,7 @@
 
         .btn_submit {
             margin-right: 10px;
-						padding: 9px 15px 9px 23px;
+            padding: 9px 15px 9px 23px;
 
         }
     }
@@ -153,6 +153,14 @@
 
         }
 
+    }
+
+    &_catalog {
+        margin-bottom: 50px;
+
+        input {
+            padding-right: 74px;
+        }
     }
 
     &_footer {
