@@ -1,4 +1,5 @@
 .catalog {
+<<<<<<< HEAD
 	font-size: 16px;
 	padding-top: 50px;
 
@@ -328,6 +329,60 @@
 		}
 	}
 }
+=======
+    padding-top: 50px;
+
+    &__nav {
+        margin-bottom: 40px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url('../icons/home.svg') center/contain no-repeat;
+                width: 18px;
+                height: 18px;
+                left: 0;
+                top: 44%;
+                transform: translateY(-50%);
+            }
+
+            li {
+                &:first-child {
+                    margin-left: 44px;
+                }
+            }
+
+            li+li::before {
+                content: '/';
+                padding: 0 22px;
+                color: $black-color;
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 1.3em;
+        line-height: 24px;
+        color: #2F7B80;
+        text-decoration: none;
+
+        &_active {
+            color: #8D9293;
+        }
+    }
+
+    &__img {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        float: right;
+        max-width: 510px;
+>>>>>>> fd1596d (ок)
 
 .nav__menu__link--triangle_catalog::before {
 	right: 2%;
