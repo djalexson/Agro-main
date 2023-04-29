@@ -16,41 +16,7 @@
 get_header();
 ?>
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="row hero__wrapper">
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-8 col-8">
-                            <h1 class="hero__title">ИДЕАЛЬНЫЕ АНГАРЫ ЗАВОДСКОГО ИЗГОТОВЛЕНИЯ</h1>
-                            <p class="hero__subtitle">
-                                (Ангары, Бороны, Опрыскиватели, Сельхозтехника, Запчасти)
-                            </p>
-                            <ul class="hero__list">
-                                <li class="hero__item">напрямую от производителя</li>
-                                <li class="hero__item">абсолютно любых размеров</li>
-                            </ul>
-                            <form action="#" class="form">
-                                <h2 class="form__title">
-                                    получить консультацию:
-                                </h2>
-                                <p class="form__phone">Ваш телефон<span>*</span></p>
-                                <div class="form__wrap">
-                                    <input name="phone" required placeholder="+7 ( ___ ) ___ - __ - __" type="number"
-                                        class="teltrack">
-                                    <button class="btn btn_submit buttontrack">
-																			<span>
-
-																				Отправить
-																			</span>
-                                    </button>
-                                    <a href="tel:+89282122219" class="btn btn_phone">
-                                        8 928 212 22 19</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-        </section>
+		<?php the_content(); ?>
 
 				<section class="build">
 					<div class="container">
