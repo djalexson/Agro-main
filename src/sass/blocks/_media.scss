@@ -34,10 +34,14 @@
 
 @media (max-width: 1200px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b623e0f (contacts page)
 	.button-container {
 		display: block;
 	}
 
+<<<<<<< HEAD
 	.header {
 
 		&__row {
@@ -208,10 +212,28 @@
 	.build_catalog {
 		padding-top: 30px;
 =======
+=======
+>>>>>>> b623e0f (contacts page)
 	.header {
+
+		&__row {
+			flex-wrap: wrap;
+
+		}
+
+		&--col-5 {
+			flex: 1 0 auto;
+			width: auto;
+		}
+
+		&__logo {
+			width: 10%;
+
+		}
 
 		&__price {
 			font-size: 0.8em;
+
 		}
 
 		&__contacs__link {
@@ -255,6 +277,7 @@
 	.form_build .btn_phone {
 		padding: 8px 10px 9px 10px;
 	}
+
 
 	////////// Catalog
 
@@ -343,17 +366,15 @@
 			}
 		}
 
-		&__tab {
-			font-size: 0.8em;
-			flex: 1;
-			padding: 15px 5px;
-		}
-
 		&__list {
 			&_mobile {
 				display: flex;
 			}
 		}
+	}
+
+	.build__hidden {
+		display: none;
 	}
 
 	.lg__hidden {
@@ -422,10 +443,31 @@
 		width: 100%;
 	}
 
+<<<<<<< HEAD
 	.build__hidden {
 		display: none;
 >>>>>>> fa18ee1 (add angar page)
+=======
+	////// Contacts
+	.contacts {
+		padding-top: 40px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__card {
+			iframe {
+				height: 400px;
+			}
+		}
+
+		&__item {
+			padding-bottom: 40px;
+		}
+>>>>>>> b623e0f (contacts page)
 	}
+
 }
 
 
@@ -437,6 +479,9 @@
 
 @media (max-width: 1055px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b623e0f (contacts page)
 	.header {
 
 		&__logo {
@@ -448,6 +493,7 @@
 			font-size: 0.8em;
 			width: 12%;
 
+<<<<<<< HEAD
 		}
 
 	}
@@ -460,6 +506,8 @@
 			display: block;
 			width: 30%;
 			margin: 10px auto 0 auto;
+=======
+>>>>>>> b623e0f (contacts page)
 		}
 
 >>>>>>> c6fdf2a (все ок)
@@ -474,10 +522,14 @@
 
 @media (max-width: 999px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b623e0f (contacts page)
 	//.build__tabs {
 	//		width: 72%;
 	//		margin: 20px auto 0 auto;
 	//}
+<<<<<<< HEAD
 
 =======
 	.build__tabs {
@@ -516,16 +568,24 @@
 		&__title {
 			text-align: center;
 		}
+=======
+>>>>>>> b623e0f (contacts page)
 
 		&__descr {
 			text-align: center;
 		}
 	}
 
+<<<<<<< HEAD
 =======
 	.build__tab {
 		font-size: 0.8em;
 	}
+=======
+	//.build__tab {
+	//		font-size: 0.8em;
+	//}
+>>>>>>> b623e0f (contacts page)
 
 	.form_build input {
 		width: 26%;
@@ -1858,6 +1918,8 @@
 			font-size: 0.8em;
 		}
 	}
+<<<<<<< HEAD
+=======
 
 	////// Contacts
 	.contacts {
@@ -1869,12 +1931,40 @@
 
 		&__card {
 			iframe {
+				height: 360px;
+			}
+		}
+
+		&__item {
+			padding-bottom: 40px;
+		}
+	}
+}
+>>>>>>> b623e0f (contacts page)
+
+	////// Contacts
+	.contacts {
+		padding-top: 40px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+<<<<<<< HEAD
+		&__card {
+			iframe {
 				height: 240px;
 			}
 		}
 
 		&__item {
 			padding-bottom: 40px;
+=======
+	.btn {
+		&_header {
+			display: block;
+			width: 100%;
+>>>>>>> b623e0f (contacts page)
 		}
 
 		&__wrap {
@@ -1910,6 +2000,7 @@
 				margin-bottom: 20px;
 			}
 		}
+<<<<<<< HEAD
 
 		&__card {
 			margin-bottom: 20px;
@@ -1922,11 +2013,88 @@
 		&__option {
 			padding: 12px;
 		}
+=======
+	}
+
+	////// Contacts
+	.contacts {
+		padding-top: 40px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__card {
+			iframe {
+				height: 340px;
+			}
+		}
+
+		&__item {
+			padding-bottom: 40px;
+		}
+	}
+}
+
+@media (max-width: 863px) {
+
+	.header {
+		&__price {
+			width: unset;
+
+		}
+	}
+}
+
+@media (max-width: 856px) {
+
+	.btn {
+		&_header {
+			display: block;
+			width: 30%;
+			margin: 10px auto 0 auto;
+		}
+
+	}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+	.header {
+		&__row {
+			padding: 25px 20px;
+		}
+	}
+
+	.btn {
+		&_header {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+
+	}
+
+	.find,
+	.about {
+		font-size: 12px;
+	}
+
+	.menu {
+		visibility: visible;
+		z-index: 1;
+		transform: translateY(0);
+	}
+>>>>>>> b623e0f (contacts page)
 
 		&__char {
 			font-size: 1em;
 		}
 
+<<<<<<< HEAD
 		&__value {
 			font-size: 1em;
 			margin-left: 80px;
@@ -1939,6 +2107,25 @@
 		&__link {
 			font-size: 0.8em;
 		}
+=======
+	//.build__tabs>.build__tab:first-child {
+
+
+	//		border-radius: 5px;
+	//}
+
+	//.build__tab {
+	//		border: 1px solid $accent;
+	//		border-radius: 5px;
+
+	//		&:not(:last-child) {
+	//				margin-bottom: 5px;
+	//				border-radius: 5px;
+	//				border-right: 1px solid $accent;
+	//				margin-right: 5px;
+	//		}
+	//}
+>>>>>>> b623e0f (contacts page)
 
 		&__nav {
 			margin-bottom: 20px;
@@ -1958,6 +2145,7 @@
 			}
 		}
 
+<<<<<<< HEAD
 		&__img {
 			max-width: 400px;
 		}
@@ -1965,6 +2153,12 @@
 		&__price {
 			margin-top: 107px;
 		}
+=======
+		//&__tabs {
+		//		width: 100%;
+		//		flex-wrap: wrap;
+		//}
+>>>>>>> b623e0f (contacts page)
 
 		&__item {
 			&_main {
@@ -2293,11 +2487,76 @@
 		}
 
 		&__item {
+<<<<<<< HEAD
 			padding-bottom: 40px;
 		}
 =======
 			display: none;
 =======
+=======
+			&_main {
+				padding: 0;
+
+				&:not(:last-child) {
+					margin-right: 4px;
+				}
+
+				a {
+					font-size: 0.55em;
+				}
+			}
+		}
+
+		&__list {
+			&_mobile {
+				display: flex;
+			}
+		}
+	}
+
+	.build_catalog {
+		padding-top: 30px;
+	}
+
+	// .build__tabs>.build__tab:last-child {
+	// 	border-radius: 5px;
+	// }
+
+	//// angar
+	.catalog__angar_prints--item {
+		width: 80px;
+
+		p {
+			font-size: 0.8em;
+		}
+	}
+
+	////// Contacts
+	.contacts {
+		padding-top: 40px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__card {
+			iframe {
+				height: 240px;
+			}
+		}
+
+		&__item {
+			padding-bottom: 40px;
+		}
+	}
+}
+
+///////////////// 
+////////////////
+
+@media (max-width: 576px) {
+	.header__hidden {
+>>>>>>> b623e0f (contacts page)
 		display: none;
 >>>>>>> fa18ee1 (add angar page)
 	}
@@ -2376,12 +2635,11 @@
 	}
 
 	.build {
-		&__tabs {
-			flex-wrap: wrap;
-		}
+		//			&__tabs {				flex-wrap: wrap;
+		//			}
 
 		&__item {
-			flex-wrap: wrap;
+			//		flex-wrap: wrap;
 
 			&-lists {
 				grid-template-columns: repeat(1, 1fr);
@@ -2559,8 +2817,8 @@
 		display: block;
 >>>>>>> fa18ee1 (add angar page)
 	}
-}
 
+<<<<<<< HEAD
 @media (max-width:386px) {
 <<<<<<< HEAD
 	// .build {
@@ -2587,28 +2845,60 @@
 	// }
 =======
 	.build {
+=======
+	////// Contacts
+	.contacts {
+		padding-top: 40px;
+>>>>>>> b623e0f (contacts page)
 
-		&__tab {
-			width: 100%;
-
-			&:not(:last-child) {
-				margin-right: 0;
-			}
-
+		&__title {
+			margin-bottom: 20px;
 		}
 
-		&__tabs {
-			width: 100%;
-			flex-direction: column;
+		&__card {
+			iframe {
+				height: 200px;
+			}
+		}
+
+		&__item {
+			padding-bottom: 40px;
 		}
 	}
+}
 
+<<<<<<< HEAD
 	.build__item-spec {
 		&:not(:last-child) {
 			margin-bottom: 10px;
 		}
 	}
 >>>>>>> c6fdf2a (все ок)
+=======
+@media (max-width:386px) {
+	// .build {
+
+	// 	&__tab {
+	// 		width: 100%;
+
+	// 		&:not(:last-child) {
+	// 			margin-right: 0;
+	// 		}
+
+	// 	}
+
+	// 	&__tabs {
+	// 		width: 100%;
+	// 		flex-direction: column;
+	// 	}
+	// }
+
+	// .build__item-spec {
+	// 	&:not(:last-child) {
+	// 		margin-bottom: 10px;
+	// 	}
+	// }
+>>>>>>> b623e0f (contacts page)
 
 
 }
@@ -2902,12 +3192,6 @@
 			}
 		}
 
-		&__tab {
-			font-size: 0.65em;
-			flex: 1;
-			padding: 10px 5px;
-		}
-
 		&__list {
 			&_mobile {
 				display: flex;
@@ -2919,6 +3203,7 @@
 		padding-top: 30px;
 	}
 
+<<<<<<< HEAD
 	.build__tab:last-child {
 <<<<<<< HEAD
 			border-radius: 5px;
@@ -2926,5 +3211,28 @@
 =======
 		border-radius: 5px;
 >>>>>>> fa18ee1 (add angar page)
+=======
+	// .build__tab:last-child {
+	// 	border-radius: 5px;
+	// }
+
+	////// Contacts
+	.contacts {
+		padding-top: 40px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__card {
+			iframe {
+				height: 160px;
+			}
+		}
+
+		&__item {
+			padding-bottom: 40px;
+		}
+>>>>>>> b623e0f (contacts page)
 	}
 }
