@@ -28,11 +28,11 @@
 		user-scalable=no">
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <!-- Favicons/ -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/assets/imgfavicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/assets/imgfavicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/assets/imgfavicon/favicon-16x16.png">
-  <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/assets/imgfavicon/site.webmanifest">
-  <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/<?php echo get_stylesheet_directory_uri(); ?>/assets/imgfavicon/safari-pinned-tab.svg" color="#0d6efd">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#0d6efd">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 	
@@ -78,43 +78,11 @@
                 </div>
 								
 								<div class="header__walb header--col-5  header__hidden">
-									<button class="btn btn_header">
+									<button class="btn btn_header popmake-2072">
 											Заказать звонок
 									</button>
 								</div>
 
-               <div class="mobile__menu">
-                    <div class="header__price mobile__item">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/cube.svg" alt="cube">
-                        <p>Качество и приемлемая цена</p>
-                    </div>
-                    <div class="header__phones mobile__item">
-                        <a href="tel:+89282122219" class="phonetrack">8-928-212-22-19</a>
-                        <a href="tel:+89287789280" class="phonetrack">8-928-778-92-80</a>
-                    </div>
-                    <div class="header__social mobile__item">
-                        <div class="header__contacs">
-                            <a href="#" class="header__contacs__link header__contacs__link--wsp">
-                                <p>WhatsApp</p>
-                            </a>
-                        </div>
-                        <div class="header__contacs mobile__item">
-                            <a href="mailto:mail@agro-teh.su"
-                                class="header__contacs__link header__contacs__link--mail mailtrack">
-                                <p>mail@agro-teh.su</p>
-                            </a>
-                        </div>
-                    </div>
-                    <button class="btn btn_header btn_mobile mobile__item">
-                        Заказать звонок
-                    </button>
-                </div>
-
-								<div class="hamburger">
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                </div>
           
 							</div>
 
@@ -126,8 +94,6 @@
             <div class="container">
 							<div class="row">
 								<div class="col-12 nav__wrap">
-									
-
 								<?PHP  my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
 									</div>
 							</div>

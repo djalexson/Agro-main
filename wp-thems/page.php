@@ -27,13 +27,25 @@ get_header();
 											</h2>
 									</div>
 							</div>
-							<ul class="build__tabs">
+							<ul class="build__tabs slider">
 									<li class="build__tab build__tab_active"><span>Ангары бескаркасные</span></li>
 									<li class="build__tab"><span>Каркасные ангары</span></li>
 									<li class="build__tab"><span>Ангары тентовые</span></li>
 									<li class="build__tab"><span>Ремонт и реконструкция ангаров</span></li>
 									<li class="build__tab"><span>Изготовление металлоконструкций</span></li>
 							</ul>
+							<div class="button-container">
+									<button id="prevBtn" class="prevBtn"  data-action="prev">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" stroke="1"/>
+										</svg>
+									</button>
+									<button id="nextBtn" class="nextBtn"  data-action="next">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L15.17 12z" stroke="1"/>
+										</svg>
+									</button>
+								</div>
 							<div class="build__wrap-tabs">
 
 									<div class="row justify-content-xl-center build__item build__item_active">
@@ -336,13 +348,25 @@ get_header();
 											</h2>
 									</div>
 							</div>
-							<ul class="build__tabs">
+							<ul class="build__tabs slider">
 									<li class="build__tab build__tab_active"><span> Бороны </span></li>
 									<li class="build__tab"><span> Опрыскиватели </span></li>
 									<li class="build__tab"><span> Разбрасыватели удобрений </span></li>
 									<li class="build__tab"><span> Прочая сельхозтехника </span></li>
 									<li class="build__tab"><span> Запчасти и комплектующие </span></li>
 							</ul>
+							<div class="button-container">
+									<button id="prevBtn" class="prevBtn"  data-action="prev">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" stroke="1"/>
+										</svg>
+									</button>
+									<button id="nextBtn" class="nextBtn"  data-action="next">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L15.17 12z" stroke="1"/>
+										</svg>
+									</button>
+								</div>
 							<div class="build__wrap-tabs">
 
 									<div class="row justify-content-xl-center build__item build__item_active">

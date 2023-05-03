@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "gulp-htmlmin": "^5.0.1",
-    "jquery": "^3.6.4"
+    "gulp-htmlmin": "^5.0.1"
   }
 }

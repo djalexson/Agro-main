@@ -33,10 +33,25 @@
 }
 
 @media (max-width: 1200px) {
+	.button-container{
+		display: block;
+	}
 	.header {
 
+		&__row{
+	flex-wrap: wrap;
+	
+}
+&--col-5{
+	flex: 1 0 auto;
+width: auto;}
+&__logo{
+width: 10%;
+
+}
 			&__price {
 					font-size: 0.8em;
+
 			}
 
 			&__contacs__link {
@@ -181,6 +196,9 @@
 			}
 	}
 
+	.build__hidden {
+		display: none;
+	}
 	.lg__hidden {
 			display: block;
 	}
@@ -203,28 +221,34 @@
 ///////////////////////////
 
 @media (max-width: 1055px) {
-	.btn {
-			&_header {
-					display: block;
-					width: 30%;
-					margin: 10px auto 0 auto;
-			}
+.header{
 
+	&__logo{
+		width: 15%;
+		
+		}
+		&__price {
+			font-size: 0.8em;
+			width: 12%;
+			
 	}
+
+}
+	
 
 }
 
 
 @media (max-width: 999px) {
-	.build__tabs {
-			width: 72%;
-			margin: 20px auto 0 auto;
-	}
+	//.build__tabs {
+	//		width: 72%;
+	//		margin: 20px auto 0 auto;
+	//}
 
 
-	.build__tab {
-			font-size: 0.8em;
-	}
+	//.build__tab {
+	//		font-size: 0.8em;
+	//}
 
 	.form_build input {
 			width: 26%;
@@ -411,11 +435,11 @@
 					}
 			}
 
-			&__tab {
-					font-size: 0.9em;
-					flex: 1;
-					padding: 10px 5px;
-			}
+			//&__tab {
+			//		font-size: 0.9em;
+			//		flex: 1;
+			//		padding: 10px 5px;
+			//}
 
 			&__list {
 					&_mobile {
@@ -439,13 +463,8 @@
 			font-size: 13px;
 	}
 
-	.header__phones {
-			margin: 10px 0 0 0;
-	}
-
 	.btn {
 			&_header {
-					margin: 10px 0 0 0;
 					display: block;
 					width: 100%;
 			}
@@ -461,30 +480,63 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 863px) {
 
+	.header {
+		&__price {
+	width: unset;
+			
+	}
+}}
+@media (max-width: 856px) {
+
+	.btn {
+		&_header {
+				display: block;
+				width: 30%;
+				margin: 10px auto 0 auto;
+		}
+
+}
+
+}
+@media (max-width: 768px) {
+	.header {
+	&__row{
+		padding: 25px 20px;
+	}	
+	}
+
+	.btn {
+		&_header {
+				display: block;
+				width: 100%;
+				margin: 0;
+		}
+
+}
 	.find,
 	.about {
 			font-size: 12px;
 	}
 
-	.build__tabs>.build__tab:first-child {
+	//.build__tabs>.build__tab:first-child {
 
 
-			border-radius: 5px;
-	}
+	//		border-radius: 5px;
+	//}
 
-	.build__tab {
-			border: 1px solid $accent;
-			border-radius: 5px;
+	//.build__tab {
+	//		border: 1px solid $accent;
+	//		border-radius: 5px;
 
-			&:not(:last-child) {
-					margin-bottom: 5px;
-					border-radius: 5px;
-					border-right: 1px solid $accent;
-					margin-right: 5px;
-			}
-	}
+	//		&:not(:last-child) {
+	//				margin-bottom: 5px;
+	//				border-radius: 5px;
+	//				border-right: 1px solid $accent;
+	//				margin-right: 5px;
+	//		}
+	//}
 
 	.build {
 			font-size: 12px;
@@ -494,10 +546,10 @@
 					margin-bottom: 10px;
 			}
 
-			&__tabs {
-					width: 100%;
-					flex-wrap: wrap;
-			}
+			//&__tabs {
+			//		width: 100%;
+			//		flex-wrap: wrap;
+			//}
 
 			&__item {
 					flex-wrap: wrap;
@@ -875,9 +927,9 @@
 			padding-top: 30px;
 	}
 
-	.build__tabs>.build__tab:last-child {
-			border-radius: 5px;
-	}
+	//.build__tabs>.build__tab:last-child {
+	//		border-radius: 5px;
+	//}
 }
 
 ///////////////// 
@@ -962,12 +1014,11 @@
 	}
 
 	.build {
-			&__tabs {
-					flex-wrap: wrap;
-			}
+//			&__tabs {				flex-wrap: wrap;
+//			}
 
 			&__item {
-					flex-wrap: wrap;
+			//		flex-wrap: wrap;
 
 					&-lists {
 							grid-template-columns: repeat(1, 1fr);
@@ -1143,28 +1194,28 @@
 }
 
 @media (max-width:386px) {
-	.build {
+	//.build {
 
-			&__tab {
-					width: 100%;
+	//		&__tab {
+	//				width: 100%;
 
-					&:not(:last-child) {
-							margin-right: 0;
-					}
+	//				&:not(:last-child) {
+	//						margin-right: 0;
+	//				}
 
-			}
+	//		}
 
-			&__tabs {
-					width: 100%;
-					flex-direction: column;
-			}
-	}
+	//		&__tabs {
+	//				width: 100%;
+	//				flex-direction: column;
+	//		}
+	//}
 
-	.build__item-spec {
-			&:not(:last-child) {
-					margin-bottom: 10px;
-			}
-	}
+	//.build__item-spec {
+	//		&:not(:last-child) {
+	//				margin-bottom: 10px;
+	//		}
+	//}
 
 
 }
@@ -1309,7 +1360,7 @@
 			padding-top: 30px;
 	}
 
-	.build__tab:last-child {
-			border-radius: 5px;
-	}
+	//.build__tab:last-child {
+	//		border-radius: 5px;
+	//}
 }

@@ -1,19 +1,24 @@
 .header
 	&__contacs
+		&:not(:first-child)
+			margin-top: 2px
 		&__link
 			position: relative
 			color: $black-color
 			text-decoration: none
+			display: block
+			line-height: normal
+			padding: 4px 0
 			transition: all .30s ease-in-out
 			&:hover
 				color: lighten( $black-color,11% )
 			p
 				font-family: $fontM
 				padding-left: 28px
+				line-height: normal
 				font-weight: 400
 				font-size: 1em
-				letter-spacing: 0.01em
-
+				
 			&--wsp ,&--mail
 				&::before
 					content: ""

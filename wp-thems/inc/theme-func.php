@@ -1,5 +1,4 @@
 <?php
-				var_dump( get_field('mob_menu',false, false));
 				// свой класс построения меню:
 		class My_Walker_Nav_Menu extends Walker_Nav_Menu {
 					
@@ -132,7 +131,7 @@ class My_Walker_footer_Menu extends Walker_Nav_Menu {
 }
 
 function my_nav_menu( $args,$Walker,$class) {
-	$attr= get_field("mob","main-menu")?'data-menu="'.get_field("mob","main-menu" ).'"':'';
+	$attr= get_field("mob_menu","options")?'data-menu="'.get_field("mob_menu","options").'"':'';
 	
 	$args = array_merge( [
 		'container'       =>  false,

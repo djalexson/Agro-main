@@ -41,6 +41,7 @@
 			&:hover
 				color: darken($white-color,11%)
 			&--triangle
+				padding-right: 20px !important
 				&::before
 					content: ""
 					position: absolute
@@ -49,7 +50,7 @@
 					border-left: 8.5px solid transparent
 					border-right: 8.5px solid transparent
 					border-top: 9px solid $white-color
-					right: -20px
+					right: 0
 					top: 50%
 					transform: translateY(-50%)
 					transition: all .30s ease-in-out
@@ -73,7 +74,6 @@
 				color: darken($white-color,11%)
 @media (min-width:769px) 
 	.nav
-		padding: 0 44px 0 20px
 		&__menu
 			display: flex
 			justify-content: flex-start
@@ -84,8 +84,9 @@
 						&::after
 							opacity: 1
 							width: 100%
+			&__item
 				&:not(:last-child)
-					margin-right: auto
+					margin-right: 7.3%
 
 				&:has(.nav__dropdown:hover,.nav__dropdown_item:hover,.nav__dropdown_link:hover)
 					.nav__menu__link
@@ -169,6 +170,38 @@
 						opacity: 1
 						width: 100%
 
+@media (max-width:1187px)
+	.nav
+		&__menu
+			justify-content: center
+			&__item
+					&:not(:last-child)
+						margin-right: 6vw
+@media (max-width:1150px)
+	.nav
+		&__menu
+			&__item
+					&:not(:last-child)
+						margin-right: 5vw 
+@media (max-width:965px)
+	.nav
+		&__menu
+			&__item
+					&:not(:last-child)
+						margin-right: 4.2vw 
+@media (max-width:905px)
+	.nav
+		&__menu
+			&__item
+					&:not(:last-child)
+						margin-right: 3vw 
+@media (max-width:824px)
+	.nav
+		&__menu
+			&__item
+					&:not(:last-child)
+						margin-right: 2vw 
+
 @media (max-width:768px)
 	.menu
 		visibility: visible
@@ -205,6 +238,7 @@
 		min-height: 62px
 		&__menu
 			display: none
+			justify-content: unset
 			background: $accent
 			position: absolute
 			left: 0
@@ -228,6 +262,7 @@
 				cursor: pointer
 				border-bottom: 1px solid $white-color
 				&:not(:last-child)
+					margin-right: 0
 					margin-bottom: 15px
 				&:hover,&:active
 					background: rgba($white-color, 0.1 )

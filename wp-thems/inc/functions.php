@@ -303,7 +303,7 @@ function bootscore_fa_preload($tag) {
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/theme-func.php';
+//require get_template_directory() . '/inc/theme-func.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**

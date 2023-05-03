@@ -2,9 +2,9 @@
 	font-size: 16px;
 
 	&__logo {
+		width: 79%;
 			&__link {
 					display: block;
-					width: 79%;
 					img {
 							display: block;
 							width: 100%;
@@ -17,12 +17,12 @@
 	&__row {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
-			flex-wrap: wrap;
-			padding: 25px 20px;
+			justify-content:flex-start;
+			padding: 25px 0;
 	}
 &--col-5{
-flex: 1 0 auto;
+flex: 1 0 calc(100%/5 - 20px);
+width: calc(100%/5 - 20px);
 &:not(:last-child){
 margin-right: 20px;
 
@@ -32,7 +32,9 @@ margin-right: 20px;
 
 	&__price {
 			display: flex;
+
 			align-items: center;
+		
 
 			img {
 					display: block;
@@ -41,7 +43,7 @@ margin-right: 20px;
 			}
 
 			p {
-					font-family: $fontM ;
+					font-family: $fontM;
 					margin-left: 13px;
 					font-weight: 400;
 					font-size: 1em;
@@ -51,18 +53,15 @@ margin-right: 20px;
 	}
 
 
-	&__phones {
-			display: flex;
-			flex-direction: column;
-
-			a {
+	&__phones {		
+		a {
+				display: block;
 					font-family: $fontM;
 					text-decoration: none;
 					font-style: normal;
 					font-weight: 500;
-					font-size: 1.17em;
-					line-height: 26px;
-					letter-spacing: 0.01em;
+					font-size: 1.10em;
+					line-height: normal;
 					color: $black-color;
 			}
 	}
