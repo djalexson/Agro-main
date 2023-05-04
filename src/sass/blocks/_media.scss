@@ -2548,6 +2548,22 @@
 		&__item {
 			padding-bottom: 40px;
 		}
+
+		&__wrap {
+			align-items: center;
+		}
+
+		&__form_wrap {
+			width: 80%;
+
+			button {
+				margin-top: 20px;
+			}
+
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
 	}
 }
 
