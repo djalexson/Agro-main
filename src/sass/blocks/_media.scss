@@ -232,6 +232,27 @@
 		}
 	}
 
+	////// Company
+
+	.about__hidden {
+		display: none;
+	}
+
+	.company {
+		&__col {
+			width: 100%;
+		}
+
+		&__about {
+			padding-top: 0;
+		}
+	}
+
+	.lg__hidden {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
 }
 
 
