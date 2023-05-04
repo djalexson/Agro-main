@@ -39,4 +39,20 @@
     &__subtitle {
         text-transform: uppercase;
     }
+
+    &__input {
+        width: 100%;
+    }
+
+    &__wrap {
+        align-items: flex-end;
+    }
+
+    &__form_wrap {
+        width: 24%;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
 }
