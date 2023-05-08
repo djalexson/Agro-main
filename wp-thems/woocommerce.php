@@ -15,6 +15,7 @@
 
 get_header();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 get_template_part("temlates_blocks/header_gg")
 ?>
@@ -40,9 +41,15 @@ wc_get_template( 'archive-product.php' );
 14
 <div id="content" class="site-content container py-5 mt-4">
   <div id="primary" class="content-area">
+=======
+>>>>>>> 1abbba6 (wp wc)
 
-    <!-- Hook to add something nice -->
+get_template_part("temlates_blocks/header_gg")
+?>
+		
+		<!-- Hook to add something nice -->
     <?php bs_after_primary(); ?>
+<<<<<<< HEAD
 
     <main id="main" class="site-main">
 
@@ -52,16 +59,36 @@ wc_get_template( 'archive-product.php' );
         <div class="col">
           <?php woocommerce_content(); ?>
 >>>>>>> 900b25c (ок)
+=======
+		
+    <main>
+			<?php if(is_singular( 'product' )): ?>
+				
+				<?php woocommerce_breadcrumb(); ?>
+				<!-- Breadcrumb -->
+				<?php endif; ?>
+				<div class="row">
+					<div class="col">
+          <?php if ( is_singular( 'product' ) ) {
+						woocommerce_content();
+					}else{
+wc_get_template( 'archive-product.php' );
+} ?>
+>>>>>>> 1abbba6 (wp wc)
         </div>
         <!-- sidebar -->
            <!-- row -->
       </div>
     </main><!-- #main -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   </div><!-- #primary -->
 </div><!-- #content -->
 >>>>>>> 900b25c (ок)
+=======
+
+>>>>>>> 1abbba6 (wp wc)
 <?php
 get_footer();
