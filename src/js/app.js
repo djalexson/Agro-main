@@ -407,7 +407,6 @@ function swiper(elem) {
 swiper('mySwiper_1');
 swiper('mySwiper_2');
 swiper('mySwiper_3');
-
-
-
-
+swiper('mySwiper_4');
+swiper('mySwiper_5');
+swiper('mySwiper_6');
