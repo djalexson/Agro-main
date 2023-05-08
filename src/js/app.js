@@ -371,6 +371,43 @@ window.addEventListener('resize', () => {
 	}
 })
 
+//////////  Swiper 
+
+function swiper(elem) {
+	const swiperEl = document.querySelector(`.${elem}`);
+	Object.assign(swiperEl, {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		pagination: {
+			clickable: true,
+		},
+		breakpoints: {
+			"@0.00": {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			"@0.75": {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			"@1.00": {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			"@1.50": {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+		},
+
+	});
+
+	swiperEl.initialize();
+}
+
+swiper('mySwiper_1');
+swiper('mySwiper_2');
+swiper('mySwiper_3');
 
 
 
