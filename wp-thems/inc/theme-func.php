@@ -1,5 +1,4 @@
 <?php
-				var_dump( get_field('mob_menu',false, false));
 				// свой класс построения меню:
 		class My_Walker_Nav_Menu extends Walker_Nav_Menu {
 					
@@ -132,8 +131,7 @@ class My_Walker_footer_Menu extends Walker_Nav_Menu {
 }
 
 function my_nav_menu( $args,$Walker,$class) {
-	$attr= get_field("mob","main-menu")?'data-menu="'.get_field("mob","main-menu" ).'"':'';
-	
+	$attr= get_field("mob_menu","options")?'data-menu="'.get_field("mob_menu","options").'"':'';	
 	$args = array_merge( [
 		'container'       =>  false,
 		'container_id'    =>  false,
@@ -146,3 +144,67 @@ function my_nav_menu( $args,$Walker,$class) {
 
 	echo wp_nav_menu( $args );
 }
+
+
+
+
+
+function dynamic_products_shortcode($atts) {
+	// Обработка атрибутов шорткода, если это необходимо
+	$atts = shortcode_atts(array(
+			'category' => 'all',
+			'count' => 4,
+	), $atts);
+
+	// Логика обработки шорткода
+	$args = array(
+			'post_type' => 'product',
+			'posts_per_page' => $atts['count'],
+	);
+
+	if ($atts['category'] !== 'all') {
+			$args['tax_query'] = array(
+					array(
+							'taxonomy' => 'product_cat',
+							'field' => 'slug',
+							'terms' => $atts['category'],
+					),
+			);
+	}
+
+	$products = new WP_Query($args);
+
+	$output= '<div class="row">';
+	
+	while ($products->have_posts()) {
+		$products->the_post();
+		
+		$output .= '<div class="col-sm-12 col-xl-3">';
+			$output .= '<div class="catalog__card">';
+
+			// Ссылка на изображение
+			$output .= '<a href="' . get_the_permalink() . '"> ';
+			$output .= '<img src="' . get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') . '" class="catalog__card_img"  alt="'. get_the_title() .'">';
+			$output .= '</a>';
+
+			// Название и описание
+			$output .= '<h2 class="catalog__card_title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
+			$product = wc_get_product(get_the_ID());
+			if ($product->get_price()) {
+				$output .= '<p class="catalog__card_price">' . wc_price($product->get_price()) . '</p>';
+			} else {
+					$output .= '<span  class="catalog__card_price">Цена не указана</span>';
+			}			
+			// Цена
+
+			$output .= '</div>';
+			$output .= '</div>';
+		}
+		$output .= '</div>';
+	
+		wp_reset_postdata();
+		
+		return $output;
+}
+add_shortcode('dynamic_products', 'dynamic_products_shortcode');
+

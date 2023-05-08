@@ -6,14 +6,11 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-function webaxpro_taxi_setup() {
-	//load_theme_textdomain( 'webaxpro-taxi', get_template_directory() . '/languages' );
-	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'post-thumbnails' );
+function webaxpro_setup() {
 	register_nav_menus(
 		array(
-			'main-menu' => esc_html__( 'header-nav', 'webaxpro-taxi' ),
-			'duwn-menu' => esc_html__( 'footer-nav', 'webaxpro-taxi' ),
+		
+			'duwn-menu' => esc_html__( 'footer-nav', 'webaxpro' ),
 		)
 	);
 	add_theme_support(
@@ -32,12 +29,15 @@ function webaxpro_taxi_setup() {
 	
 	
 }
+add_action( 'after_setup_theme', 'webaxpro_setup' );
+
 function pine_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'pine_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'pine_content_width', 0 );
 // style and scripts
 add_action('wp_enqueue_scripts', 'bootscore_child_enqueue_styles');
+
 function bootscore_child_enqueue_styles() {
 	
 	add_action( 'after_setup_theme', 'webaxpro_taxi_setup' );
@@ -46,7 +46,8 @@ function bootscore_child_enqueue_styles() {
 
 
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(),"1.0");
-
+	wp_enqueue_script( 'my-ajax-script', get_stylesheet_directory_uri() . '/js/my-ajax-script.js', array( 'jquery' ), '1.0', true );
+	wp_localize_script( 'my-ajax-script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
   // custom.js
   wp_enqueue_script('libs-js', get_stylesheet_directory_uri() . '/assets/js/libs.min.js', array(),"1.0", true);
   wp_enqueue_script('script-js', get_stylesheet_directory_uri() . '/assets/js/app.min.js', array(),"1.0", true);
@@ -69,10 +70,59 @@ function truemisha_theme_setup() {
 	wp_enqueue_style( 'main' );
 }
 add_action('admin_enqueue_scripts', 'change_plugin_styles');*/
-require get_template_directory() . '/inc/theme-func.php';
-// WooCommerce
-require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 
+
+
+
+//apply_filters( 'post_type_link', $post_link, $post, $leavename, $sample );
+//add_filter( 'post_type_link', 'faq_permalink', 1, 2 );
+//function faq_permalink( $permalink, $post ){
+
+//	// выходим если это не наш тип записи: без холдера %faqcat%
+//	if( strpos( $permalink, '%type-work%' ) === false )
+//		return $permalink;
+
+//	// Получаем элементы таксы
+//	$terms = get_the_terms( $post, 'type-work' );
+//	// если есть элемент заменим холдер
+//	if( ! is_wp_error( $terms ) && !empty( $terms ) && is_object( $terms[0] ) )
+//		$term_slug = array_pop( $terms )->slug;
+//	// элемента нет, а должен быть...
+//	else
+//		$term_slug = 'no-type-work';
+
+//	return str_replace( '%type-work%', $term_slug, $permalink );
+//}
+
+add_filter( 'post_type_link', 'faq_permalink', 1, 2 );
+function faq_permalink( $permalink, $post ) {
+	if ( $post->post_type === 'works' && $term = get_the_terms( $post, 'type-work' ) ) {
+			$term_slug = $term[0]->slug;
+			
+			// check if the term has a parent category
+			if ( $term[0]->parent !== 0 ) {
+					$parent_term = get_term( $term[0]->parent, 'type-work' );
+					if ( $parent_term ) {
+							$term_slug = $parent_term->slug . '/' . $term_slug;
+					}
+			}
+			
+			$permalink = str_replace( '%type-work%', $term_slug, $permalink );
+	}
+	return $permalink;
+}
+
+
+
+
+require_once get_template_directory() . '/inc/theme-func.php';
+require get_template_directory()  . '/inc/accordion.php';
+// WooCommerce
+require get_stylesheet_directory() . '/woocommerce/woocommerce-functions.php';
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
 
 // Выключить дубль заголовка вкладок в карточке товара
 add_filter('woocommerce_product_description_heading', 'my_product_description_heading',10,1);
@@ -166,3 +216,39 @@ add_action( 'admin_print_styles-toplevel_page_wpcf7', function() {
 
 } );
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+// Регистрация AJAX-обработчика
+add_action('wp_ajax_my_ajax_action', 'my_ajax_action_callback');
+add_action('wp_ajax_nopriv_my_ajax_action', 'my_ajax_action_callback');
+
+function my_ajax_action_callback() {
+    // Получаем данные из AJAX-запроса
+    $category = $_POST['category']; // Категория товаров, которую нужно отобразить
+    $offset = isset( $_POST['offset'] ) ? intval( $_POST['offset'] ) : 0;
+
+    // Запрос на получение товаров
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 1,
+				'offset' => $offset,
+        //'product_cat' => $category
+    );
+    $products = new WP_Query($args);
+
+    // Обрабатываем полученные товары
+    if ($products->have_posts()) {
+        while ($products->have_posts()) {
+            $products->the_post();
+            global $product;
+            // Выводим информацию о товаре
+            echo '<h2>' . get_the_title() . '</h2>';
+            echo '<div>' . $product->get_price_html() . '</div>';
+        }
+    } else {
+        echo 'Нет товаров для отображения';
+    }
+
+    // Обязательно завершаем выполнение
+    wp_die();
+}
