@@ -220,6 +220,10 @@
 			font-size: 1.2em;
 			line-height: 94.02%;
 			text-align: center;
+
+			a {
+				color: $black-color;
+			}
 		}
 
 		&_price {
@@ -229,6 +233,7 @@
 			line-height: 94.02%;
 			text-align: center;
 			color: #E10B20;
+			display: block;
 		}
 	}
 

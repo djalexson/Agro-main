@@ -320,7 +320,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-/* ///// Angar tab
+///// Angar tab
 const angarItems = document.querySelector('.catalog__angar_prints--left');
 const angarItem = angarItems.querySelectorAll('.catalog__angar_prints--item');
 
@@ -330,7 +330,7 @@ for (let i = 0; i < angarItem.length; i++) {
 		current[0].className = current[0].className.replace(' catalog__angar_prints--item_active', '');
 		this.className += ' catalog__angar_prints--item_active';
 	})
-} */
+}
 
 //////  Cards
 const items = document.querySelectorAll('.cards__item');
