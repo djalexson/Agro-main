@@ -204,7 +204,6 @@
 		font-size: 1.3em;
 		line-height: 94.02%;
 	}
-
 	&__card {
 		border: 1px solid #2F7B80;
 		border-radius: 5px;
@@ -222,8 +221,16 @@
 			font-size: 1.2em;
 			line-height: 94.02%;
 			text-align: center;
-		}
 
+			a {
+				color: $black-color;
+				transition: all .3s ease-in-out;
+				&:hover{
+					color: lighten(  $black-color, 11%)	;
+
+				}
+			}
+		}
 		&_price {
 			margin-top: 25px;
 			font-weight: 500;
