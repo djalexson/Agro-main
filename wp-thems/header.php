@@ -128,6 +128,7 @@
 								<div class="col-12 nav__wrap">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 								<?PHP  my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
 =======
 								<?PHP my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
@@ -135,6 +136,8 @@
 =======
 									
 
+=======
+>>>>>>> 39033c2 (wp w2c)
 								<?PHP  my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
 >>>>>>> fd1596d (ок)
 									</div>

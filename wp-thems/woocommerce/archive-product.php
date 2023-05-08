@@ -17,6 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
+<<<<<<< HEAD
 
 $term_id = 0;
 $current_term = get_queried_object();
@@ -28,10 +29,22 @@ if ($current_term instanceof WP_Term && !is_wp_error($current_term)) {
 
 <div id="product-list" data-termid="<?=$term_id?>" data-numitem="16" data-numitemclick="8">
 
+=======
+global $post;
+$cat = wp_get_post_terms( $post->ID, 'product_cat' )[0]->slug;
+echo "<pre>";
+var_dump($cat);
+echo "</pre>";
+
+?>
+<button id="my-ajax-button">Показать товары</button>
+<div id="product-container" class="product-container">
+>>>>>>> 39033c2 (wp w2c)
 <div class="my-loader">
     <div class="spinner"></div>
 </div>
 
+<<<<<<< HEAD
 </div>
 
 <div id="load-more">
@@ -88,3 +101,23 @@ if ($current_term instanceof WP_Term && !is_wp_error($current_term)) {
 	
 </script>
 
+=======
+
+</div>
+
+<header class="woocommerce-products-header">
+	<?php if ( apply_filters( 'woocommerce_show_page_title', false ) ) : ?>
+		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+		<?php endif; ?>
+
+	<?php
+	/**
+	 * Hook: woocommerce_archive_description.
+	 *
+	 * @hooked woocommerce_taxonomy_archive_description - 10
+	 * @hooked woocommerce_product_archive_description - 10
+	 */
+	do_action( 'woocommerce_archive_description' );
+	?>
+</header>
+>>>>>>> 39033c2 (wp w2c)

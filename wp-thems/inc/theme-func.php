@@ -1,5 +1,4 @@
 <?php
-				var_dump( get_field('mob_menu',false, false));
 				// свой класс построения меню:
 		class My_Walker_Nav_Menu extends Walker_Nav_Menu {
 					
@@ -140,9 +139,13 @@ function my_nav_menu( $args,$Walker,$class) {
 =======
 >>>>>>> fd1596d (ок)
 function my_nav_menu( $args,$Walker,$class) {
+<<<<<<< HEAD
 	$attr= get_field("mob","main-menu")?'data-menu="'.get_field("mob","main-menu" ).'"':'';
 	
 >>>>>>> 900b25c (ок)
+=======
+	$attr= get_field("mob_menu","options")?'data-menu="'.get_field("mob_menu","options").'"':'';	
+>>>>>>> 39033c2 (wp w2c)
 	$args = array_merge( [
 		'container'       =>  false,
 		'container_id'    =>  false,
@@ -155,6 +158,9 @@ function my_nav_menu( $args,$Walker,$class) {
 
 	echo wp_nav_menu( $args );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 39033c2 (wp w2c)
 }
 
 
@@ -191,21 +197,37 @@ function dynamic_products_shortcode($atts) {
 	while ($products->have_posts()) {
 		$products->the_post();
 		
+<<<<<<< HEAD
 		$output .= '<div class="col-sm-12 col-xl-3" title="'.get_the_title() .'">';
 			$output .= '<div class="catalog__card">';
 
 			// Ссылка на изображение
 			$output .= '<a href="' . get_the_permalink() . '" title="'.get_the_title() .'">  ';
+=======
+		$output .= '<div class="col-sm-12 col-xl-3">';
+			$output .= '<div class="catalog__card">';
+
+			// Ссылка на изображение
+			$output .= '<a href="' . get_the_permalink() . '"> ';
+>>>>>>> 39033c2 (wp w2c)
 			$output .= '<img src="' . get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') . '" class="catalog__card_img"  alt="'. get_the_title() .'">';
 			$output .= '</a>';
 
 			// Название и описание
+<<<<<<< HEAD
 			$output .= '<h2 class="catalog__card_title" ><a title="'.get_the_title() .'" href="' . get_the_permalink() . '">' . wp_trim_words( get_the_title() , 2, "..." ) . '</a></h2>';
+=======
+			$output .= '<h2 class="catalog__card_title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
+>>>>>>> 39033c2 (wp w2c)
 			$product = wc_get_product(get_the_ID());
 			if ($product->get_price()) {
 				$output .= '<p class="catalog__card_price">' . wc_price($product->get_price()) . '</p>';
 			} else {
+<<<<<<< HEAD
 					$output .= '<p  class="catalog__card_price">Цена не указана</p>';
+=======
+					$output .= '<span  class="catalog__card_price">Цена не указана</span>';
+>>>>>>> 39033c2 (wp w2c)
 			}			
 			// Цена
 
@@ -220,6 +242,7 @@ function dynamic_products_shortcode($atts) {
 }
 add_shortcode('dynamic_products', 'dynamic_products_shortcode');
 
+<<<<<<< HEAD
 function dynamic_img_shortcode($atts) {
 	// Обработка атрибутов шорткода, если это необходимо
 	$atts = shortcode_atts(array(
@@ -253,3 +276,5 @@ add_shortcode('dynamic_img', 'dynamic_img_shortcode');
 =======
 }
 >>>>>>> 900b25c (ок)
+=======
+>>>>>>> 39033c2 (wp w2c)

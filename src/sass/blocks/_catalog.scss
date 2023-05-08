@@ -1,6 +1,7 @@
 .catalog {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	font-size: 16px;
 	padding-top: 50px;
 
@@ -392,6 +393,9 @@
 	border-right: 5.5px solid rgba(0, 0, 0, 0);
 	border-top: 6px solid #fff;
 =======
+=======
+	font-size: 16px;
+>>>>>>> 39033c2 (wp w2c)
 	padding-top: 50px;
 
 	&__nav {
@@ -537,12 +541,13 @@
 
 	&__item {
 		margin-bottom: 4px;
-		padding: 6px 0;
+		padding: 6px 4px;
+		line-height: normal;
 
 		a {
 			font-weight: 400;
 			font-size: 0.9em;
-			line-height: 150%;
+
 			text-decoration: none;
 			color: $black-color;
 		}
@@ -795,6 +800,9 @@
 		text-decoration: none;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 39033c2 (wp w2c)
 }
 .breadcrumb-item{
 color: rgba(0, 0, 0, 0.40);
@@ -838,6 +846,7 @@ color: $accent;
 	to {
 			transform: rotate(360deg);
 	}
+<<<<<<< HEAD
 }
     .product-loader {
         width: 100%;
@@ -867,3 +876,6 @@ color: $accent;
 =======
 }
 >>>>>>> f9d85e8 (fix acc and add dropdown)
+=======
+}
+>>>>>>> 39033c2 (wp w2c)
