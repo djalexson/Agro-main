@@ -399,7 +399,6 @@ function swiper(elem) {
 				spaceBetween: 30,
 			},
 		},
-
 	});
 
 	swiperEl.initialize();

@@ -262,6 +262,7 @@
 
 		&__item {
 			max-width: 220px;
+			min-height: 200px;
 		}
 	}
 }
@@ -1111,7 +1112,7 @@
 		}
 
 		&__item {
-			max-width: 150px;
+			max-width: 22%;
 			min-height: 240px;
 
 			p {
