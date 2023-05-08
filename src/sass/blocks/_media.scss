@@ -265,6 +265,35 @@
 			min-height: 200px;
 		}
 	}
+
+	/////// Menu
+	.accordion {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		&-item {
+			width: 200px;
+			margin-right: 10px;
+		}
+
+		&-button {
+			padding: 0;
+			height: 35px;
+			font-size: 0.8rem;
+			position: relative;
+		}
+
+		&-body {
+			// position: relative;
+		}
+	}
+
+	.catalog__list_hide {
+		position: absolute;
+	}
+
+
 }
 
 
