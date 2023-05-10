@@ -23,6 +23,7 @@ get_header();  ?>
 		$tabs_hidden= get_field('works_tabs_hildden', get_the_ID());
 		$tabs= get_field('works_tab', get_the_ID());
 		?>
+		
 		   <div class="row">
                     <div class="col-sm-12 col-xl-12 col-xxl-9 card__col">
                         <div class="float-wrapper">
