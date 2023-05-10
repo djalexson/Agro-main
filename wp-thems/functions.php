@@ -49,7 +49,7 @@ function bootscore_child_enqueue_styles() {
 	wp_enqueue_script( 'my-ajax-script', get_stylesheet_directory_uri() . '/js/my-ajax-script.js', array( 'jquery' ), '1.0', true );
 	wp_localize_script( 'my-ajax-script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
   // custom.js
-  wp_enqueue_script('libs-js', get_stylesheet_directory_uri() . '/assets/js/libs.min.js', array(),"1.0", true);
+//  wp_enqueue_script('libs-js', get_stylesheet_directory_uri() . '/assets/js/libs.min.js', array(),"1.0", true);
   wp_enqueue_script('script-js', get_stylesheet_directory_uri() . '/assets/js/app.min.js', array(),"1.0", true);
 }
 
@@ -219,36 +219,55 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 
 
 // Регистрация AJAX-обработчика
-add_action('wp_ajax_my_ajax_action', 'my_ajax_action_callback');
-add_action('wp_ajax_nopriv_my_ajax_action', 'my_ajax_action_callback');
+add_action( 'wp_ajax_get_products', 'get_products' );
+add_action( 'wp_ajax_nopriv_get_products', 'get_products' );
 
-function my_ajax_action_callback() {
-    // Получаем данные из AJAX-запроса
-    $category = $_POST['category']; // Категория товаров, которую нужно отобразить
-    $offset = isset( $_POST['offset'] ) ? intval( $_POST['offset'] ) : 0;
+function get_products() {
+//	$term_id = $_POST['term_id'];
+	$page = $_POST['page'];
+	$posts_per_page = $_POST['count'];
+	$term_id = isset($_POST['term_id']) ? intval($_POST['term_id']) : 0;
+	
+	$offset = ($page - 1) * $posts_per_page;
 
-    // Запрос на получение товаров
-    $args = array(
-        'post_type' => 'product',
-        'posts_per_page' => 1,
-				'offset' => $offset,
-        //'product_cat' => $category
-    );
-    $products = new WP_Query($args);
+	$args = array(
+			'post_type' => 'product',
+			'posts_per_page' => $posts_per_page,
+			'order' => 'ASC',
+			'offset' => $offset,
+			);
 
-    // Обрабатываем полученные товары
-    if ($products->have_posts()) {
-        while ($products->have_posts()) {
-            $products->the_post();
-            global $product;
-            // Выводим информацию о товаре
-            echo '<h2>' . get_the_title() . '</h2>';
-            echo '<div>' . $product->get_price_html() . '</div>';
-        }
-    } else {
-        echo 'Нет товаров для отображения';
+ if ($term_id > 0) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'product_cat',
+                'field' => 'term_id',
+                'terms' => $term_id,
+            ),
+        );
     }
+	$query = new WP_Query($args);
+	$products = array();
 
-    // Обязательно завершаем выполнение
-    wp_die();
+	if ($query->have_posts()) {
+			while ($query->have_posts()) {
+					$query->the_post();
+					global $product;
+					$product_id = $product->get_id();
+					$title = get_the_title($product_id);
+					$permalink = get_the_permalink($product_id);
+					$image = wp_get_attachment_image_src(get_post_thumbnail_id($product_id), 'medium')[0];
+					$price =  wc_get_product($product_id)->get_price() ? wc_price($product->get_price()):"Цена не указана";
+					$products[] = array(
+							'title' => $title,
+							'permalink' => $permalink,
+							'image' => $image,
+							'price' => $price,
+					);
+			}
+	}
+
+	wp_reset_postdata();
+
+	wp_send_json($products);
 }
