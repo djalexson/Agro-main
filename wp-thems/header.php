@@ -126,43 +126,21 @@
             <div class="container">
 							<div class="row">
 								<div class="col-12 nav__wrap">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+								<?PHP  my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
+=======
+								<?PHP my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
+>>>>>>> 4624431 (oк)
+=======
+									
 
-									<ul class="nav__menu" data-menu="Меню">
-											<li class="nav__menu__item active" ><a href="#" class="nav__menu__link">Ангары </a></li>
-											<li class="nav__menu__item"><a href="#" class="nav__menu__link">Сельхозтехника</a></li>
-											<li class="nav__menu__item"><a href="#" class="nav__menu__link">Запчасти </a></li>
-											<li class="nav__menu__item"><a href="#" class="nav__menu__link">Услуги </a></li>
-											<li class="nav__menu__item"><a href="#" class="nav__menu__link">О компании </a></li>
-											<li class="nav__menu__item"><a href="#" class="nav__menu__link">Контакты </a></li>
-											<li class="nav__menu__item">
-													<a href="#" class="nav__menu__link nav__menu__link--triangle">Наши
-															работы
-													</a>
-													<ul class="nav__dropdown">
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Ангары
-																			бескаркасные</a></li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Тентовые ангары</a>
-															</li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Навесы и тока</a>
-															</li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Авиационные
-																			ангары</a></li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Каркасные ангары</a>
-															</li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Бороны</a></li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Разбрасыватели
-																			удобрений</a></li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Опрыскиватели</a>
-															</li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Прочая
-																			сельхозтехника</a></li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Запчасти и
-																			комплектующие</a></li>
-															<li class="nav__dropdown__item"><a href="#" class="nav__dropdown__link">Услуги</a></li>
-													</ul>
-											</li>
-									</ul>
-								</div>
+=======
+>>>>>>> 39033c2 (wp w2c)
+								<?PHP  my_nav_menu( [ 'theme_location'  => 'main-menu' ],"My_Walker_Nav_Menu","nav__menu" );?>
+>>>>>>> fd1596d (ок)
+									</div>
 							</div>
             </div>
         </nav>

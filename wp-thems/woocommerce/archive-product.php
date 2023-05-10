@@ -1,0 +1,193 @@
+<?php
+/**
+ * The Template for displaying product archives, including the main shop page which is a post type archive
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 3.4.0
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 741d184 (redy  to short ajax  qvery)
+
+$term_id = 0;
+$current_term = get_queried_object();
+if ($current_term instanceof WP_Term && !is_wp_error($current_term)) {
+    $term_id = $current_term->term_id;
+}
+<<<<<<< HEAD
+
+?>
+
+<div id="product-list" data-termid="<?=$term_id?>" data-numitem="16" data-numitemclick="8">
+
+=======
+global $post;
+$cat = wp_get_post_terms( $post->ID, 'product_cat' )[0]->slug;
+echo "<pre>";
+var_dump($cat);
+echo "</pre>";
+
+?>
+<button id="my-ajax-button">Показать товары</button>
+<div id="product-container" class="product-container">
+>>>>>>> 39033c2 (wp w2c)
+=======
+
+?>
+
+<div id="product-list" data-termid="<?=$term_id?>" data-numitem="16" data-numitemclick="8">
+
+>>>>>>> 741d184 (redy  to short ajax  qvery)
+<div class="my-loader">
+    <div class="spinner"></div>
+</div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+</div>
+
+<div id="load-more">
+	<button id="load-more-button">Load More</button>
+	
+</div>
+
+<script>
+	var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
+	const termId =   Number(jQuery('#product-list').attr('data-termid'));
+	const numItem =   Number(jQuery('#product-list').attr('data-numitem'));
+	const numItemClick =   Number(jQuery('#product-list').attr('data-numitemclick'));
+	let page = 	1;
+	let loadingMore = false;	
+	 function loadProducts(count) {
+			loadingMore = true;
+			jQuery('.my-loader').show();
+			jQuery.post(ajaxUrl, {
+					action: 'get_products',
+					term_id: termId,
+					page: page,
+					count: count
+			}, function(response) {
+
+				jQuery('.my-loader').hide();
+				if (response.length == 0) {	
+				jQuery('#load-more').hide();
+				}else{
+					jQuery('#product-list').append(response.map(function(product) {
+							return '<div class="product">' +
+							'<a href="' + product.permalink + '">' +
+                    '<img src="' + product.image + '" alt="' + product.title + '">' +
+                    '<h2>' + product.title + '</h2>' +
+                    '<span class="price">' + product.price + '</span>' +
+                    '</a>' +
+                    '</div>';
+									}).join(''));}
+									
+									if (response.length < count) {
+										jQuery('#load-more').hide();
+									} else {
+										page++;
+										loadingMore = false;
+									}
+								});
+							}
+							
+    jQuery('#load-more-button').on('click', function() {
+        if (!loadingMore) {
+            loadProducts(numItemClick);
+        }
+    });
+	 loadProducts(numItem) 
+	
+</script>
+
+=======
+=======
+</div>
+>>>>>>> 741d184 (redy  to short ajax  qvery)
+
+<div id="load-more">
+	<button id="load-more-button">Load More</button>
+	
+</div>
+
+<<<<<<< HEAD
+<header class="woocommerce-products-header">
+	<?php if ( apply_filters( 'woocommerce_show_page_title', false ) ) : ?>
+		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+		<?php endif; ?>
+
+	<?php
+	/**
+	 * Hook: woocommerce_archive_description.
+	 *
+	 * @hooked woocommerce_taxonomy_archive_description - 10
+	 * @hooked woocommerce_product_archive_description - 10
+	 */
+	do_action( 'woocommerce_archive_description' );
+	?>
+</header>
+>>>>>>> 39033c2 (wp w2c)
+=======
+<script>
+	var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
+	const termId =   Number(jQuery('#product-list').attr('data-termid'));
+	const numItem =   Number(jQuery('#product-list').attr('data-numitem'));
+	const numItemClick =   Number(jQuery('#product-list').attr('data-numitemclick'));
+	let page = 	1;
+	let loadingMore = false;	
+	 function loadProducts(count) {
+			loadingMore = true;
+			jQuery('.my-loader').show();
+			jQuery.post(ajaxUrl, {
+					action: 'get_products',
+					term_id: termId,
+					page: page,
+					count: count
+			}, function(response) {
+
+				jQuery('.my-loader').hide();
+				if (response.length == 0) {	
+				jQuery('#load-more').hide();
+				}else{
+					jQuery('#product-list').append(response.map(function(product) {
+							return '<div class="product">' +
+							'<a href="' + product.permalink + '">' +
+                    '<img src="' + product.image + '" alt="' + product.title + '">' +
+                    '<h2>' + product.title + '</h2>' +
+                    '<span class="price">' + product.price + '</span>' +
+                    '</a>' +
+                    '</div>';
+									}).join(''));}
+									
+									if (response.length < count) {
+										jQuery('#load-more').hide();
+									} else {
+										page++;
+										loadingMore = false;
+									}
+								});
+							}
+							
+    jQuery('#load-more-button').on('click', function() {
+        if (!loadingMore) {
+            loadProducts(numItemClick);
+        }
+    });
+	 loadProducts(numItem) 
+	
+</script>
+
+>>>>>>> 741d184 (redy  to short ajax  qvery)

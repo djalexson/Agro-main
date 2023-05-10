@@ -1,3 +1,9 @@
+.slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
 .build {
     padding-top: 50px;
     font-size: 16px;
@@ -11,7 +17,7 @@
         margin-top: 20px;
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         &>.build__tab {
             &:last-child {
@@ -30,6 +36,7 @@
     }
 
     &__tab {
+        height: 51px;
         color: #000;
         font-weight: 500;
         font-size: 1em;
@@ -38,11 +45,10 @@
         line-height: normal;
         border-radius: 0;
         padding: 8px 8px;
-        flex: 1 0 calc(100%/5);
+        flex: 1 0 231px;
         border: 2px solid $accent;
         display: flex;
         align-items: center;
-				flex-wrap: wrap;
         transition: all .30s cubic-bezier(0.39, 0.575, 0.565, 1);
 
         &-second {
@@ -61,6 +67,7 @@
         & span {
             text-align: center;
             width: 100%;
+            white-space: pre-wrap;
             pointer-events: none;
         }
 
@@ -78,8 +85,9 @@
 
     }
 
+
     &__wrapper {
-        display: flex;
+        position: relative;
     }
 
     &__item {
