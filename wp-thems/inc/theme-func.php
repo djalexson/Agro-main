@@ -277,7 +277,8 @@ if( $atts["id_post"] != "on"){
 
 				$output .= '<div class="col-sm-6 col-xl-3"><a href="'.$value["works_img"].'" style="display:block;"><img src="'.$value["works_img"].'" alt="photo" class="catalog__photo"></div>';
 			}else{
-				
+			
+			
 				$output .= '<div class="col-sm-6 col-xl-3"><img src="/wp-content/uploads/2023/05/nophoto.png" alt="photo" class="catalog__photo"></div>';
 			}
 		
