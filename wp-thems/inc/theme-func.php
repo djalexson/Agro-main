@@ -198,6 +198,7 @@ function dynamic_products_shortcode($atts) {
 		$products->the_post();
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$output .= '<div class="col-sm-12 col-xl-3" title="'.get_the_title() .'">';
 			$output .= '<div class="catalog__card">';
 
@@ -210,24 +211,39 @@ function dynamic_products_shortcode($atts) {
 			// Ссылка на изображение
 			$output .= '<a href="' . get_the_permalink() . '"> ';
 >>>>>>> 39033c2 (wp w2c)
+=======
+		$output .= '<div class="col-sm-12 col-xl-3" title="'.get_the_title() .'">';
+			$output .= '<div class="catalog__card">';
+
+			// Ссылка на изображение
+			$output .= '<a href="' . get_the_permalink() . '" title="'.get_the_title() .'">  ';
+>>>>>>> 741d184 (redy  to short ajax  qvery)
 			$output .= '<img src="' . get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') . '" class="catalog__card_img"  alt="'. get_the_title() .'">';
 			$output .= '</a>';
 
 			// Название и описание
 <<<<<<< HEAD
+<<<<<<< HEAD
 			$output .= '<h2 class="catalog__card_title" ><a title="'.get_the_title() .'" href="' . get_the_permalink() . '">' . wp_trim_words( get_the_title() , 2, "..." ) . '</a></h2>';
 =======
 			$output .= '<h2 class="catalog__card_title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
 >>>>>>> 39033c2 (wp w2c)
+=======
+			$output .= '<h2 class="catalog__card_title" ><a title="'.get_the_title() .'" href="' . get_the_permalink() . '">' . wp_trim_words( get_the_title() , 2, "..." ) . '</a></h2>';
+>>>>>>> 741d184 (redy  to short ajax  qvery)
 			$product = wc_get_product(get_the_ID());
 			if ($product->get_price()) {
 				$output .= '<p class="catalog__card_price">' . wc_price($product->get_price()) . '</p>';
 			} else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 					$output .= '<p  class="catalog__card_price">Цена не указана</p>';
 =======
 					$output .= '<span  class="catalog__card_price">Цена не указана</span>';
 >>>>>>> 39033c2 (wp w2c)
+=======
+					$output .= '<p  class="catalog__card_price">Цена не указана</p>';
+>>>>>>> 741d184 (redy  to short ajax  qvery)
 			}			
 			// Цена
 
@@ -243,6 +259,9 @@ function dynamic_products_shortcode($atts) {
 add_shortcode('dynamic_products', 'dynamic_products_shortcode');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 741d184 (redy  to short ajax  qvery)
 function dynamic_img_shortcode($atts) {
 	// Обработка атрибутов шорткода, если это необходимо
 	$atts = shortcode_atts(array(
@@ -273,8 +292,11 @@ return $output ;
 // Логика обработки шорткода
 }
 add_shortcode('dynamic_img', 'dynamic_img_shortcode');
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 900b25c (ок)
 =======
 >>>>>>> 39033c2 (wp w2c)
+=======
+>>>>>>> 741d184 (redy  to short ajax  qvery)

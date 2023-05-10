@@ -312,6 +312,9 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 
 // Регистрация AJAX-обработчика
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 741d184 (redy  to short ajax  qvery)
 add_action( 'wp_ajax_get_products', 'get_products' );
 add_action( 'wp_ajax_nopriv_get_products', 'get_products' );
 
@@ -338,6 +341,7 @@ function get_products() {
                 'terms' => $term_id,
             ),
         );
+<<<<<<< HEAD
     }
 	$query = new WP_Query($args);
 	$products = array();
@@ -396,9 +400,32 @@ function my_ajax_action_callback() {
         }
     } else {
         echo 'Нет товаров для отображения';
+=======
+>>>>>>> 741d184 (redy  to short ajax  qvery)
     }
+	$query = new WP_Query($args);
+	$products = array();
 
-    // Обязательно завершаем выполнение
-    wp_die();
+	if ($query->have_posts()) {
+			while ($query->have_posts()) {
+					$query->the_post();
+					global $product;
+					$product_id = $product->get_id();
+					$title = get_the_title($product_id);
+					$permalink = get_the_permalink($product_id);
+					$image = wp_get_attachment_image_src(get_post_thumbnail_id($product_id), 'medium')[0];
+					$price =  wc_get_product($product_id)->get_price() ? wc_price($product->get_price()):"Цена не указана";
+					$products[] = array(
+							'title' => $title,
+							'permalink' => $permalink,
+							'image' => $image,
+							'price' => $price,
+					);
+			}
+	}
+
+	wp_reset_postdata();
+
+	wp_send_json($products);
 }
 >>>>>>> 39033c2 (wp w2c)
