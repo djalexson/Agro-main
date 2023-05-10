@@ -11,6 +11,9 @@
 		maximum-scale=1.0, 
 		user-scalable=no">
     <title>Агро</title>
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -316,16 +319,16 @@
 
         <section class="build build_catalog">
             <div class="container">
-                <ul class="build__tabs">
+                <ul class="build__tabs slider">
                     <li class="build__tab catalog__tab build__tab_active"><span>Описание</span></li>
                     <li class="build__tab catalog__tab"><span>Характеристики</span></li>
                     <li class="build__tab catalog__tab"><span>Комплектации и цены</span></li>
                     <li class="build__tab catalog__tab"><span>Доставка</span></li>
                     <li class="build__tab catalog__tab"><span>Фото</span></li>
                 </ul>
-                <div class="row">
+                <div class="build__wrap-tabs">
 
-                    <div class="build__item ">
+                    <div class="build__item build__item_active">
                         <div class="catalog__wrapper">
                             <div class="col-12">
                                 <h2 class="catalog__title">Описание модели</h2>
@@ -545,34 +548,70 @@
                         </div>
                     </div>
 
-                    <div class="build__item build__item_active">
+                    <div class="build__item">
                         <div class="catalog__wrapper">
                             <h2 class="catalog__title">Фото</h2>
                             <div class="row">
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_1.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_2.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_3.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_3.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_1.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_2.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_3.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_3.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_1.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_2.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_3.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
-                                <div class="col-sm-6 col-xl-3"><img src="img/catal_3.jpg" alt="photo"
-                                        class="catalog__photo" scalable="280px"></div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_1.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_2.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_3.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_3.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_1.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_2.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_3.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_3.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_1.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_2.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_3.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <a class="image-popup-fit-width" href="img/catal_1.jpg">
+                                        <img src="img/catal_3.jpg" alt="photo" class="catalog__photo">
+                                    </a>
+                                </div>
                             </div>
 
                         </div>
@@ -763,6 +802,8 @@
         </div>
     </footer>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/app.min.js"></script>
     <script src="js/libs.min.js"></script>

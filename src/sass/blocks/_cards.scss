@@ -25,9 +25,3 @@
 swiper-container {
     margin-top: 40px;
 }
-
-img[scalable] {
-    cursor: pointer;
-    transition-property: max-width, max-height, left, top;
-    transition-duration: 0.3s;
-}
