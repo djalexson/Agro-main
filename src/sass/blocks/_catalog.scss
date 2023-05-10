@@ -1,7 +1,4 @@
 .catalog {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	font-size: 16px;
 	padding-top: 50px;
 
@@ -207,7 +204,6 @@
 		font-size: 1.3em;
 		line-height: 94.02%;
 	}
-<<<<<<< HEAD
 	&__card {
 		border: 1px solid #2F7B80;
 		border-radius: 5px;
@@ -332,60 +328,6 @@
 		}
 	}
 }
-=======
-    padding-top: 50px;
-
-    &__nav {
-        margin-bottom: 40px;
-
-        ul {
-            list-style: none;
-            display: flex;
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                background: url('../icons/home.svg') center/contain no-repeat;
-                width: 18px;
-                height: 18px;
-                left: 0;
-                top: 44%;
-                transform: translateY(-50%);
-            }
-
-            li {
-                &:first-child {
-                    margin-left: 44px;
-                }
-            }
-
-            li+li::before {
-                content: '/';
-                padding: 0 22px;
-                color: $black-color;
-            }
-        }
-    }
-
-    &__link {
-        font-weight: 400;
-        font-size: 1.3em;
-        line-height: 24px;
-        color: #2F7B80;
-        text-decoration: none;
-
-        &_active {
-            color: #8D9293;
-        }
-    }
-
-    &__img {
-        margin-left: 20px;
-        margin-bottom: 20px;
-        float: right;
-        max-width: 510px;
->>>>>>> fd1596d (ок)
 
 .nav__menu__link--triangle_catalog::before {
 	right: 2%;
@@ -393,356 +335,7 @@
 	border-left: 5.5px solid rgba(0, 0, 0, 0);
 	border-right: 5.5px solid rgba(0, 0, 0, 0);
 	border-top: 6px solid #fff;
-=======
-=======
-	font-size: 16px;
->>>>>>> 39033c2 (wp w2c)
-	padding-top: 50px;
-
-	&__nav {
-		margin-bottom: 40px;
-
-		ul {
-			list-style: none;
-			display: flex;
-			position: relative;
-
-			&::before {
-				content: "";
-				position: absolute;
-				background: url(../icons/home.svg) center/contain no-repeat;
-				width: 18px;
-				height: 18px;
-				left: 0;
-				top: 44%;
-				transform: translateY(-50%);
-			}
-
-			li {
-				&:first-child {
-					margin-left: 44px;
-				}
-			}
-
-			li+li::before {
-				content: '/';
-				padding: 0 22px;
-				color: $black-color;
-			}
-		}
-	}
-
-	&__link {
-		font-weight: 400;
-		font-size: 1.3em;
-		line-height: 24px;
-		color: #2F7B80;
-		text-decoration: none;
-
-		&_active {
-			color: #8D9293;
-		}
-	}
-
-	&__img {
-		margin-left: 20px;
-		margin-bottom: 20px;
-		float: right;
-		max-width: 510px;
-
-		&_down {
-			width: 100%;
-		}
-	}
-
-	&__title {
-		font-weight: 600;
-		font-size: 1.7em;
-		line-height: 58px;
-		text-transform: uppercase;
-
-		&_prod {
-			margin-top: 70px;
-			margin-bottom: 40px;
-		}
-	}
-
-	&__price {
-		margin-top: 40px;
-		font-weight: 400;
-		font-size: 1.2em;
-		line-height: 29px;
-		color: #E10B20;
-	}
-
-	&__subtitle {
-		margin-top: 25px;
-		font-weight: 600;
-		font-size: 1.2em;
-		line-height: 29px;
-		color: #000000;
-	}
-
-	&__text {
-		margin-top: 25px;
-		font-weight: 400;
-		font-size: 1.2em;
-		line-height: 29px;
-
-		span {
-			margin-left: 20px;
-			position: relative;
-
-			&::before {
-				content: "";
-				position: absolute;
-				top: 5px;
-				left: -20px;
-				width: 10px;
-				height: 10px;
-				background: $black-color;
-				border-radius: 50%;
-			}
-		}
-	}
-
-	&__list {
-		margin-left: 20px;
-		list-style: none;
-
-		li ul {
-			display: none;
-			height: auto;
-			margin: 0;
-			padding: 0;
-		}
-
-		li:hover ul {
-			display: block;
-			opacity: 1;
-		}
-
-		&_mobile {
-			margin-left: 0;
-			display: none;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 40px;
-
-			li {
-				flex: 1;
-			}
-		}
-
-		&_hide {
-			list-style: none;
-		}
-	}
-
-	&__item {
-		margin-bottom: 4px;
-		padding: 6px 4px;
-		line-height: normal;
-
-		a {
-			font-weight: 400;
-			font-size: 0.9em;
-
-			text-decoration: none;
-			color: $black-color;
-		}
-
-		background: #F6F7FA;
-		border-radius: 5px;
-		text-align: center;
-		cursor: pointer;
-
-		&_main {
-			margin-bottom: 4px;
-			padding: 8px 0;
-			position: relative;
-
-			a {
-				font-weight: 400;
-				font-size: 1em;
-				line-height: 150%;
-				color: $white-color;
-				text-decoration: none;
-
-			}
-
-			background: $accent;
-			border-radius: 5px;
-			text-align: center;
-			text-transform: uppercase;
-			cursor: pointer;
-		}
-
-	}
-
-	&__option {
-		margin-bottom: 8px;
-		display: flex;
-		background: #E1ECED;
-		border-radius: 5px;
-		padding: 22px 30px;
-	}
-
-	&__char {
-		font-weight: 600;
-		font-size: 1.3em;
-		line-height: 94.02%;
-	}
-
-	&__value {
-		margin-left: 100px;
-		font-weight: 400;
-		font-size: 1.3em;
-		line-height: 94.02%;
-	}
-
-=======
->>>>>>> 4122b5d (блок катигории поменял  стили  карточи к)
-	&__card {
-		border: 1px solid #2F7B80;
-		border-radius: 5px;
-		min-height: 400px;
-		cursor: pointer;
-
-		&_img {
-			width: 100%;
-		}
-
-		&_title {
-			padding: 0 5px;
-			margin-top: 25px;
-			font-weight: 500;
-			font-size: 1.2em;
-			line-height: 94.02%;
-			text-align: center;
-
-			a {
-				color: $black-color;
-				transition: all .3s ease-in-out;
-				&:hover{
-					color: lighten(  $black-color, 11%)	;
-
-				}
-			}
-		}
-		&_price {
-			margin-top: 25px;
-			font-weight: 500;
-			font-size: 1.2em;
-			line-height: 94.02%;
-			text-align: center;
-			color: #E10B20;
-		}
-	}
-
-	&__photo {
-		width: 100%;
-		margin-bottom: 20px;
-		cursor: pointer;
-	}
-
-	&__dropdown {
-		position: absolute;
-		top: 28px;
-		padding: 12px 15px;
-		width: 100%;
-		opacity: 0;
-		border-radius: 0 0 5px 5px;
-		background: $accent;
-		list-style: none;
-	}
-<<<<<<< HEAD
->>>>>>> c6fdf2a (все ок)
-=======
-
-	//// angar
-	&__angar {
-		max-height: 418px;
-
-		&_item {
-			margin-top: 12px;
-		}
-
-		&_prints {
-			margin-top: 40px;
-			display: flex;
-			justify-content: space-between;
-
-			&--left {
-				display: flex;
-			}
-
-			&--item {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 129px;
-				height: 63px;
-				background: #E1ECED;
-				border-radius: 5px;
-				cursor: pointer;
-
-				&:not(:last-child) {
-					margin-right: 8px;
-				}
-
-				svg {
-					width: 13px;
-					margin-right: 7px;
-					fill: $black-color;
-				}
-
-				p {
-					font-weight: 600;
-					font-size: 1em;
-					line-height: 94.02%;
-					text-align: center;
-					color: $black-color;
-				}
-
-				&_active {
-					background: #2F7B80;
-
-					svg {
-						fill: $white-color;
-					}
-
-					p {
-						color: $white-color;
-					}
-				}
-			}
-		}
-	}
-
-	&__spec {
-		flex-direction: column;
-		align-items: flex-start;
-
-		img {
-			margin-bottom: 10px;
-			width: 30px;
-		}
-	}
->>>>>>> fa18ee1 (add angar page)
 }
-
-<<<<<<< HEAD
-=======
-.nav__menu__link--triangle_catalog::before {
-	right: 2%;
-	top: 55%;
-	border-left: 5.5px solid rgba(0, 0, 0, 0);
-	border-right: 5.5px solid rgba(0, 0, 0, 0);
-	border-top: 6px solid #fff;
-}
->>>>>>> f9d85e8 (fix acc and add dropdown)
 
 
 //////  Carousel custom
@@ -800,20 +393,12 @@
 
 .accordion-flush .accordion-item {
 	border: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f9d85e8 (fix acc and add dropdown)
 }
 
 .accordion-item {
 	a {
 		text-decoration: none;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 39033c2 (wp w2c)
 }
 .breadcrumb-item{
 color: rgba(0, 0, 0, 0.40);
@@ -857,10 +442,6 @@ color: $accent;
 	to {
 			transform: rotate(360deg);
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 741d184 (redy  to short ajax  qvery)
 }
     .product-loader {
         width: 100%;
@@ -884,15 +465,3 @@ color: $accent;
             opacity: 0.6;
         }
     }
-<<<<<<< HEAD
-=======
-}
->>>>>>> c6fdf2a (все ок)
-=======
-}
->>>>>>> f9d85e8 (fix acc and add dropdown)
-=======
-}
->>>>>>> 39033c2 (wp w2c)
-=======
->>>>>>> 741d184 (redy  to short ajax  qvery)
