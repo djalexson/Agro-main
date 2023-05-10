@@ -16,41 +16,7 @@
 get_header();
 ?>
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="row hero__wrapper">
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-8 col-8">
-                            <h1 class="hero__title">ИДЕАЛЬНЫЕ АНГАРЫ ЗАВОДСКОГО ИЗГОТОВЛЕНИЯ</h1>
-                            <p class="hero__subtitle">
-                                (Ангары, Бороны, Опрыскиватели, Сельхозтехника, Запчасти)
-                            </p>
-                            <ul class="hero__list">
-                                <li class="hero__item">напрямую от производителя</li>
-                                <li class="hero__item">абсолютно любых размеров</li>
-                            </ul>
-                            <form action="#" class="form">
-                                <h2 class="form__title">
-                                    получить консультацию:
-                                </h2>
-                                <p class="form__phone">Ваш телефон<span>*</span></p>
-                                <div class="form__wrap">
-                                    <input name="phone" required placeholder="+7 ( ___ ) ___ - __ - __" type="number"
-                                        class="teltrack">
-                                    <button class="btn btn_submit buttontrack">
-																			<span>
-
-																				Отправить
-																			</span>
-                                    </button>
-                                    <a href="tel:+89282122219" class="btn btn_phone">
-                                        8 928 212 22 19</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-        </section>
+		<?php the_content(); ?>
 
 				<section class="build">
 					<div class="container">
@@ -61,13 +27,25 @@ get_header();
 											</h2>
 									</div>
 							</div>
-							<ul class="build__tabs">
+							<ul class="build__tabs slider">
 									<li class="build__tab build__tab_active"><span>Ангары бескаркасные</span></li>
 									<li class="build__tab"><span>Каркасные ангары</span></li>
 									<li class="build__tab"><span>Ангары тентовые</span></li>
 									<li class="build__tab"><span>Ремонт и реконструкция ангаров</span></li>
 									<li class="build__tab"><span>Изготовление металлоконструкций</span></li>
 							</ul>
+							<div class="button-container">
+									<button id="prevBtn" class="prevBtn"  data-action="prev">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" stroke="1"/>
+										</svg>
+									</button>
+									<button id="nextBtn" class="nextBtn"  data-action="next">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L15.17 12z" stroke="1"/>
+										</svg>
+									</button>
+								</div>
 							<div class="build__wrap-tabs">
 
 									<div class="row justify-content-xl-center build__item build__item_active">
@@ -370,13 +348,25 @@ get_header();
 											</h2>
 									</div>
 							</div>
-							<ul class="build__tabs">
+							<ul class="build__tabs slider">
 									<li class="build__tab build__tab_active"><span> Бороны </span></li>
 									<li class="build__tab"><span> Опрыскиватели </span></li>
 									<li class="build__tab"><span> Разбрасыватели удобрений </span></li>
 									<li class="build__tab"><span> Прочая сельхозтехника </span></li>
 									<li class="build__tab"><span> Запчасти и комплектующие </span></li>
 							</ul>
+							<div class="button-container">
+									<button id="prevBtn" class="prevBtn"  data-action="prev">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" stroke="1"/>
+										</svg>
+									</button>
+									<button id="nextBtn" class="nextBtn"  data-action="next">
+										<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L15.17 12z" stroke="1"/>
+										</svg>
+									</button>
+								</div>
 							<div class="build__wrap-tabs">
 
 									<div class="row justify-content-xl-center build__item build__item_active">
