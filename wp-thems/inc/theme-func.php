@@ -179,21 +179,21 @@ function dynamic_products_shortcode($atts) {
 	while ($products->have_posts()) {
 		$products->the_post();
 		
-		$output .= '<div class="col-sm-12 col-xl-3">';
+		$output .= '<div class="col-sm-12 col-xl-3" title="'.get_the_title() .'">';
 			$output .= '<div class="catalog__card">';
 
 			// Ссылка на изображение
-			$output .= '<a href="' . get_the_permalink() . '"> ';
+			$output .= '<a href="' . get_the_permalink() . '" title="'.get_the_title() .'">  ';
 			$output .= '<img src="' . get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') . '" class="catalog__card_img"  alt="'. get_the_title() .'">';
 			$output .= '</a>';
 
 			// Название и описание
-			$output .= '<h2 class="catalog__card_title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
+			$output .= '<h2 class="catalog__card_title" ><a title="'.get_the_title() .'" href="' . get_the_permalink() . '">' . wp_trim_words( get_the_title() , 2, "..." ) . '</a></h2>';
 			$product = wc_get_product(get_the_ID());
 			if ($product->get_price()) {
 				$output .= '<p class="catalog__card_price">' . wc_price($product->get_price()) . '</p>';
 			} else {
-					$output .= '<span  class="catalog__card_price">Цена не указана</span>';
+					$output .= '<p  class="catalog__card_price">Цена не указана</p>';
 			}			
 			// Цена
 
@@ -208,3 +208,33 @@ function dynamic_products_shortcode($atts) {
 }
 add_shortcode('dynamic_products', 'dynamic_products_shortcode');
 
+function dynamic_img_shortcode($atts) {
+	// Обработка атрибутов шорткода, если это необходимо
+	$atts = shortcode_atts(array(
+		'id_post' => "on",
+	), $atts);
+	$output="";
+if( $atts["id_post"] != "on"){
+	if ( get_field('works_img_all',$atts["id_post"]) ){
+
+		foreach (  get_field('works_img_all',$atts["id_post"]) as $key => $value) {
+
+			if(!empty($value["works_img"])){
+
+				$output .= '<div class="col-sm-6 col-xl-3"><a href="'.$value["works_img"].'" style="display:block;"><img src="'.$value["works_img"].'" alt="photo" class="catalog__photo"></div>';
+			}else{
+				
+				$output .= '<div class="col-sm-6 col-xl-3"><img src="/wp-content/uploads/2023/05/nophoto.png" alt="photo" class="catalog__photo"></div>';
+			}
+		
+		}
+
+	} 
+	
+	
+	
+}
+return $output ;
+// Логика обработки шорткода
+}
+add_shortcode('dynamic_img', 'dynamic_img_shortcode');
