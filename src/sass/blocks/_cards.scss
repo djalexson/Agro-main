@@ -1,0 +1,33 @@
+.cards {
+    padding-top: 100px;
+
+    &__wrap {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__item {
+        max-width: 270px;
+    }
+
+    &__btn {
+        width: 20%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+}
+
+swiper-container {
+    margin-top: 40px;
+}
+
+img[scalable] {
+    cursor: pointer;
+    transition-property: max-width, max-height, left, top;
+    transition-duration: 0.3s;
+}

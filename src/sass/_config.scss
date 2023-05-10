@@ -4,31 +4,32 @@
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
 $grid-breakpoints: (
-    xs: 0,
-    sm: 200px,
-    md: 320px,
-    lg: 480px,
-    xl: 768px,
-    xxl: 1000px
+	xs: 0,
+	sm: 200px,
+	md: 320px,
+	lg: 480px,
+	xl: 768px,
+	xxl: 1000px
 );
 $container-max-widths: (
-    sm: 320px,
-    md: 480px,
-    lg: 768px,
-    xl: 1000px,
-    xxl: 1200px
+	sm: 320px,
+	md: 480px,
+	lg: 768px,
+	xl: 1000px,
+	xxl: 1200px
 );
 @import 'node_modules/bootstrap/scss/bootstrap';
 
-html{
-margin: 0;
-padding: 0;
-border: none;	
+html {
+	margin: 0;
+	padding: 0;
+	border: none;
 
 }
+
 * {
 	box-sizing: border-box;
-	border: none;	
+	border: none;
 	margin: 0;
 	padding: 0;
 }
@@ -93,5 +94,11 @@ body {
 @import 'blocks/about';
 @import 'blocks/advantage';
 @import 'blocks/footer';
-@import 'blocks/media';
 @import 'blocks/nav';
+@import 'blocks/catalog';
+@import 'blocks/contacts';
+@import 'blocks/company';
+@import 'blocks/cards';
+@import 'blocks/phototech';
+
+@import 'blocks/media';
