@@ -447,7 +447,10 @@ function menu() {
 	list.appendChild(menuMob);
 }
 
-menu();
+if (document.querySelector('.accordion')) {
+	menu();
+}
+
 
 /////// Photo popup
 $(document).ready(function () {
