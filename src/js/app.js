@@ -365,7 +365,7 @@ if (document.querySelector('.mySwiper_1')) {
 const angarTabs = () => {
 	const angarItems = document.querySelector('.catalog__angar_prints--left');
 	const angarItem = angarItems.querySelectorAll('.catalog__angar_prints--item');
-	const img = document.querySelector('.catalog__angar');
+	const img = document.querySelectorAll('.catalog__angar');
 
 	for (let i = 0; i < angarItem.length; i++) {
 		angarItem[i].addEventListener('click', function () {
@@ -373,15 +373,21 @@ const angarTabs = () => {
 			current[0].className = current[0].className.replace(' catalog__angar_prints--item_active', '');
 			this.className += ' catalog__angar_prints--item_active';
 
-
 			if (angarItem[i].classList.contains('catalog__angar_prints--item_active') && (angarItem[i].id === "photo")) {
-				img.src = 'img/build_1.jpg';
+				img.forEach(item => {
+					item.src = 'img/build_1.jpg';
+				})
+
 			}
 			if (angarItem[i].classList.contains('catalog__angar_prints--item_active') && (angarItem[i].id === "plan")) {
-				img.src = 'img/angar_1.jpg';
+				img.forEach(item => {
+					item.src = 'img/build_3.jpg';
+				})
 			}
 			if (angarItem[i].classList.contains('catalog__angar_prints--item_active') && (angarItem[i].id === "saw")) {
-				img.src = 'img/angar_3.jpg';
+				img.forEach(item => {
+					item.src = 'img/build_4.jpg';
+				})
 			}
 		})
 	}
@@ -433,72 +439,8 @@ window.addEventListener('resize', () => {
 ///////// Menu
 
 function menu() {
-	const list = document.querySelector('.catalog__list');
+	// TO DO ...
 
-	list.insertAdjacentHTML('afterbegin', `
-		<div class="accordion accordion-flush" id="accordionExample">
-		<div class="accordion-item">
-			<a href="#" class="accordion-header" id="headingOne">
-				<button class="accordion-button" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-					АНГАРЫ
-				</button>
-			</a>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingTwo">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					СЕЛЬХОЗТЕХНИКА
-				</button>
-			</h2>
-			<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-				data-bs-parent="#accordionExample">
-				<div class="accordion-body">
-					<ul class="catalog__list_hide">
-						<li class="catalog__item"><a href="#">Бороны</a></li>
-						<li class="catalog__item"><a href="#">Модернизированный УАЗ</a></li>
-						<li class="catalog__item"><a href="#">Опрыскиватели</a></li>
-						<li class="catalog__item"><a href="#">Подвоз жидкости, ЖКУ, КАС</a></li>
-						<li class="catalog__item"><a href="#">Прочая сельхозтехника</a></li>
-						<li class="catalog__item"><a href="#">Разбрасыватели удобрений</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h2 class="accordion-header" id="headingThree">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapseThree" aria-expanded="false"
-					aria-controls="collapseThree">
-					Запчасти и комплектующие
-				</button>
-			</h2>
-			<div id="collapseThree" class="accordion-collapse collapse"
-				aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-				<div class="accordion-body">
-					<ul class="catalog__list_hide">
-						<li class="catalog__item"><a href="#">Для вентиляторных опрыскивателей</a>
-						</li>
-						<li class="catalog__item"><a href="#">Для разбрасывателей минеральных
-								удобрений</a>
-						</li>
-						<li class="catalog__item"><a href="#">Для штанговых опрыскивателей</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<a href="#" class="accordion-header" id="headingThree">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapseFour" aria-expanded="false"
-					aria-controls="collapseFour">
-					УСЛУГИ
-				</button>
-			</a>
-		</div>
-	</div>
-	`)
 }
 
 menu();
