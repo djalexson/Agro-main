@@ -440,7 +440,11 @@ window.addEventListener('resize', () => {
 
 function menu() {
 	// TO DO ...
+	const menu = document.querySelector('.accordion')
+	const menuMob = menu.cloneNode(true);
+	const list = document.querySelector('.catalog__list');
 
+	list.appendChild(menuMob);
 }
 
 menu();
