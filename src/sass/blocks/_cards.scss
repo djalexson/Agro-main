@@ -3,14 +3,20 @@
 
     &__wrap {
         margin-top: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 400px);
         gap: 30px;
     }
 
     &__item {
         max-width: 270px;
+
+        img {
+            max-width: 100%;
+            min-height: 230px;
+            object-fit: cover;
+        }
     }
 
     &__btn {
