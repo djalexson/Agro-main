@@ -166,10 +166,6 @@
 			}
 		}
 
-		&__img {
-			max-width: 450px;
-		}
-
 		&__price {
 			margin-top: 61px;
 		}
@@ -248,7 +244,6 @@
 	}
 
 	.lg__hidden {
-		width: 80%;
 		margin: 0 auto;
 		margin-bottom: 20px;
 	}
@@ -407,10 +402,6 @@
 		display: none;
 	}
 
-	.lg__hidden {
-		width: 100%;
-	}
-
 	.build__hidden {
 		display: none;
 	}
@@ -478,10 +469,6 @@
 					color: $black-color;
 				}
 			}
-		}
-
-		&__img {
-			max-width: 420px;
 		}
 
 		&__price {
@@ -1021,11 +1008,12 @@
 		}
 
 		&__img {
-			max-width: 400px;
+			width: 300px;
+			height: 170px;
 		}
 
 		&__price {
-			margin-top: 107px;
+			margin-top: 30px;
 		}
 
 		&__item {
@@ -1431,6 +1419,15 @@
 			margin-top: 30px;
 		}
 	}
+
+
+	.catalog {
+		&__img {
+			width: 230px;
+			height: 125px;
+
+		}
+	}
 }
 
 @media (max-width:386px) {
@@ -1561,11 +1558,12 @@
 		}
 
 		&__img {
-			max-width: 200px;
+			width: 204px;
+			height: 94px;
 		}
 
 		&__price {
-			margin-top: 107px;
+			margin-top: 20px;
 			font-size: 1.2em;
 		}
 

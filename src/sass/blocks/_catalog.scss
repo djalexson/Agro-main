@@ -50,9 +50,14 @@
 		margin-left: 20px;
 		margin-bottom: 20px;
 		float: right;
+		height: 290px;
 		width: 510px;
-		max-height: 290px;
-		object-fit: cover;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 
 		&_down {
 			width: 100%;
